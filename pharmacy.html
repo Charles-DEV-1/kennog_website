@@ -1,0 +1,2732 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kennog Pharmacy | Trusted Pharmacy in Isolo, Lagos</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+      :root {
+        --bg: #f3f8f7;
+        --bg2: #e7f0ed;
+        --surface: #ffffff;
+        --surface-soft: #f7fbfa;
+        --surface-tint: #e8f4f0;
+        --text: #11211d;
+        --muted: #5f726c;
+        --line: rgba(17, 33, 29, 0.1);
+        --green: #0f766e;
+        --green-deep: #0a4f49;
+        --green-soft: #d8f0ea;
+        --peach: #9fd7cb;
+        --gold: #d4b16a;
+        --sage: #0b5f59;
+        --shadow: 0 28px 80px rgba(9, 35, 31, 0.12);
+        --shadow-soft: 0 16px 36px rgba(9, 35, 31, 0.08);
+        --radius-xl: 34px;
+        --radius-lg: 24px;
+        --radius-md: 18px;
+        --radius-sm: 14px;
+        --container: min(1180px, calc(100% - 2rem));
+        --transition: 0.3s ease;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Manrope", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background:
+          radial-gradient(
+            circle at 12% 18%,
+            rgba(15, 118, 110, 0.12),
+            transparent 24%
+          ),
+          radial-gradient(
+            circle at 86% 10%,
+            rgba(212, 177, 106, 0.16),
+            transparent 20%
+          ),
+          radial-gradient(
+            circle at 80% 75%,
+            rgba(15, 118, 110, 0.08),
+            transparent 20%
+          ),
+          linear-gradient(180deg, #f8fcfb 0%, var(--bg) 48%, var(--bg2) 100%);
+        color: var(--text);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .container {
+        width: var(--container);
+        margin: 0 auto;
+      }
+
+      .section {
+        padding: 5rem 0;
+      }
+
+      .section-head {
+        max-width: 760px;
+        margin: 0 auto 2.4rem;
+        text-align: center;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+        padding: 0.55rem 0.95rem;
+        margin-bottom: 1rem;
+        border-radius: 999px;
+        background: var(--green-soft);
+        color: var(--green-deep);
+        border: 1px solid var(--line);
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--peach);
+        box-shadow: 0 0 0 6px rgba(231, 180, 164, 0.12);
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Fraunces", Georgia, serif;
+        color: var(--text);
+        letter-spacing: -0.03em;
+        line-height: 1.05;
+      }
+
+      h1 {
+        font-size: clamp(2.8rem, 7vw, 5rem);
+      }
+
+      h2 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        margin-bottom: 0.9rem;
+      }
+
+      h3 {
+        font-size: 1.15rem;
+        margin-bottom: 0.45rem;
+      }
+
+      p {
+        color: var(--muted);
+        font-size: 1rem;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        padding: 1rem 0 0;
+        backdrop-filter: blur(16px);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 1rem 1.2rem;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.82);
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow-soft);
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 0.9rem;
+        min-width: 0;
+      }
+
+      .brand-mark {
+        width: 48px;
+        height: 48px;
+        border-radius: 16px;
+        display: grid;
+        place-items: center;
+        color: #fff;
+        font-weight: 800;
+        background: linear-gradient(
+          135deg,
+          var(--gold),
+          var(--peach),
+          var(--sage)
+        );
+        color: #2d2433;
+        box-shadow: 0 12px 24px rgba(200, 181, 221, 0.18);
+      }
+
+      .brand-text strong {
+        display: block;
+        font-size: 1rem;
+      }
+
+      .brand-text span {
+        display: block;
+        color: var(--muted);
+        font-size: 0.82rem;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 1.2rem;
+        flex-wrap: wrap;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .nav-links a {
+        transition:
+          color var(--transition),
+          transform var(--transition);
+      }
+
+      .nav-links a:hover {
+        color: var(--green-deep);
+        transform: translateY(-2px);
+      }
+
+      .menu-toggle {
+        display: none;
+        position: relative;
+        margin-left: auto;
+      }
+
+      .menu-toggle summary {
+        list-style: none;
+        width: 50px;
+        height: 50px;
+        border-radius: 18px;
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+        background: rgba(255, 255, 255, 0.92);
+        border: 1px solid var(--line);
+        transition:
+          background var(--transition),
+          transform var(--transition);
+      }
+
+      .menu-toggle summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .menu-toggle summary:hover {
+        background: #fff;
+        transform: translateY(-2px);
+      }
+
+      .burger,
+      .burger::before,
+      .burger::after {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 2px;
+        border-radius: 999px;
+        background: var(--text);
+        transition:
+          transform var(--transition),
+          opacity var(--transition),
+          background var(--transition);
+      }
+
+      .burger::before {
+        transform: translateY(-6px);
+      }
+
+      .burger::after {
+        transform: translateY(4px);
+      }
+
+      .menu-toggle[open] .burger {
+        background: transparent;
+      }
+
+      .menu-toggle[open] .burger::before {
+        transform: translateY(0) rotate(45deg);
+      }
+
+      .menu-toggle[open] .burger::after {
+        transform: translateY(-2px) rotate(-45deg);
+      }
+
+      .menu-panel {
+        display: grid;
+        gap: 0.8rem;
+        width: 100%;
+        margin-top: 0.85rem;
+        padding: 1rem;
+        border-radius: 22px;
+        background: rgba(255, 255, 255, 0.98);
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow-soft);
+      }
+
+      .menu-links {
+        display: grid;
+        gap: 0.55rem;
+      }
+
+      .menu-links a {
+        padding: 0.85rem 0.95rem;
+        border-radius: 16px;
+        background: #fffafc;
+        border: 1px solid rgba(95, 76, 104, 0.08);
+        color: var(--text);
+      }
+
+      .menu-contact {
+        display: grid;
+        gap: 0.35rem;
+        padding: 1rem;
+        border-radius: 18px;
+        background: #fff7f5;
+        border: 1px solid rgba(95, 76, 104, 0.08);
+      }
+
+      .menu-contact b {
+        font-size: 1rem;
+      }
+
+      .menu-contact span {
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .hero {
+        padding: 1.5rem 0 3.5rem;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.02fr 0.98fr;
+        gap: 1.2rem;
+        align-items: stretch;
+      }
+
+      .hero-copy {
+        padding: clamp(2rem, 4vw, 3.5rem);
+        border-radius: var(--radius-xl);
+        background: linear-gradient(
+          160deg,
+          rgba(255, 255, 255, 0.98),
+          rgba(251, 244, 247, 0.96)
+        );
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-copy::after {
+        content: "";
+        position: absolute;
+        width: 280px;
+        height: 280px;
+        right: -90px;
+        bottom: -110px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(200, 181, 221, 0.28),
+          transparent 70%
+        );
+      }
+
+      .hero-copy p {
+        max-width: 58ch;
+        margin-top: 1rem;
+        font-size: 1.04rem;
+      }
+
+      .hero-actions {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 1.45rem;
+        border-radius: 999px;
+        font-weight: 700;
+        transition:
+          transform var(--transition),
+          box-shadow var(--transition),
+          background var(--transition),
+          border-color var(--transition);
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, var(--gold), var(--sage));
+        color: #2d2433;
+        box-shadow: 0 18px 34px rgba(200, 181, 221, 0.24);
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 24px 42px rgba(200, 181, 221, 0.32);
+      }
+
+      .btn-secondary {
+        background: #fff;
+        border: 1px solid var(--line);
+        color: var(--green-deep);
+      }
+
+      .btn-secondary:hover {
+        transform: translateY(-3px);
+        background: rgba(255, 255, 255, 0.88);
+      }
+
+      .hero-points {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+
+      .hero-point {
+        padding: 1rem;
+        border-radius: var(--radius-md);
+        background: rgba(255, 255, 255, 0.72);
+        border: 1px solid var(--line);
+      }
+
+      .hero-point strong {
+        display: block;
+        color: var(--green-deep);
+        margin-bottom: 0.3rem;
+      }
+
+      .hero-visual {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .hero-image {
+        min-height: 100%;
+        border-radius: var(--radius-xl);
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        position: relative;
+      }
+
+      .hero-image img {
+        height: 100%;
+        min-height: 540px;
+      }
+
+      .hero-badge {
+        position: absolute;
+        right: 1rem;
+        bottom: 1rem;
+        padding: 1rem 1.1rem;
+        border-radius: 22px;
+        background: rgba(255, 255, 255, 0.88);
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow-soft);
+        max-width: 240px;
+      }
+
+      .hero-badge strong {
+        display: block;
+        color: var(--green-deep);
+        margin-bottom: 0.2rem;
+      }
+
+      .search-wrap {
+        margin-top: -1rem;
+        position: relative;
+        z-index: 2;
+      }
+
+      .search-card {
+        padding: 1.25rem;
+        border-radius: var(--radius-xl);
+        background: rgba(255, 255, 255, 0.94);
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow);
+      }
+
+      .search-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .search-header p {
+        max-width: 54ch;
+      }
+
+      .search-input {
+        width: 100%;
+        padding: 1.1rem 1.15rem;
+        border-radius: 18px;
+        border: 1px solid var(--line);
+        background: #fff;
+        color: var(--text);
+        font: inherit;
+        outline: none;
+        transition:
+          border-color var(--transition),
+          box-shadow var(--transition);
+      }
+
+      .search-input:focus {
+        border-color: rgba(200, 181, 221, 0.42);
+        box-shadow: 0 0 0 4px rgba(200, 181, 221, 0.14);
+      }
+
+      .results-meta {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-top: 1rem;
+        color: var(--muted);
+        font-size: 0.94rem;
+        flex-wrap: wrap;
+      }
+
+      .products-grid {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 1.1rem;
+      }
+
+      .product-card {
+        display: grid;
+        grid-template-rows: auto 1fr;
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.98),
+          rgba(243, 250, 244, 0.92)
+        );
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow-soft);
+        transition:
+          transform var(--transition),
+          box-shadow var(--transition),
+          border-color var(--transition);
+      }
+
+      .product-card:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--shadow);
+        border-color: rgba(200, 181, 221, 0.26);
+      }
+
+      .product-card img {
+        height: 168px;
+      }
+
+      .product-body {
+        display: grid;
+        gap: 0.65rem;
+        padding: 0.85rem;
+      }
+
+      .product-tags {
+        display: flex;
+        gap: 0.45rem;
+        flex-wrap: wrap;
+      }
+
+      .tag-chip {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.3rem 0.56rem;
+        border-radius: 999px;
+        background: var(--green-soft);
+        color: var(--green-deep);
+        font-size: 0.7rem;
+        font-weight: 700;
+      }
+
+      .trust-grid,
+      .steps-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.2rem;
+      }
+
+      .trust-card,
+      .step-card,
+      .contact-card {
+        padding: 1.5rem;
+        border-radius: var(--radius-lg);
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.98),
+          rgba(243, 250, 244, 0.92)
+        );
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow-soft);
+      }
+
+      .trust-card strong,
+      .step-card strong {
+        display: block;
+        margin-bottom: 0.4rem;
+        color: var(--green-deep);
+        font-size: 1.05rem;
+      }
+
+      .check {
+        width: 48px;
+        height: 48px;
+        display: grid;
+        place-items: center;
+        margin-bottom: 1rem;
+        border-radius: 16px;
+        background: linear-gradient(135deg, var(--gold), var(--sage));
+        color: #2d2433;
+        font-weight: 800;
+        box-shadow: 0 12px 24px rgba(200, 181, 221, 0.2);
+      }
+
+      .step-number {
+        display: inline-grid;
+        place-items: center;
+        width: 42px;
+        height: 42px;
+        margin-bottom: 1rem;
+        border-radius: 50%;
+        background: var(--green-soft);
+        color: var(--green-deep);
+        font-weight: 800;
+      }
+
+      .contact-wrap {
+        display: grid;
+        grid-template-columns: 1.08fr 0.92fr;
+        gap: 1.2rem;
+        align-items: stretch;
+      }
+
+      .contact-card {
+        padding: 2rem;
+        border-radius: var(--radius-xl);
+        background: linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.98),
+          rgba(238, 248, 240, 0.92)
+        );
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow);
+      }
+
+      .contact-card p {
+        margin-top: 1rem;
+        margin-bottom: 1.6rem;
+        max-width: 54ch;
+      }
+
+      .contact-actions {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-bottom: 1.6rem;
+      }
+
+      .contact-lines {
+        display: grid;
+        gap: 0.7rem;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .contact-lines strong {
+        color: var(--text);
+        margin-right: 0.35rem;
+      }
+
+      .contact-visual {
+        border-radius: var(--radius-xl);
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        border: 1px solid var(--line);
+      }
+
+      .contact-visual img {
+        height: 100%;
+        min-height: 420px;
+      }
+
+      .empty-state {
+        display: none;
+        padding: 1.4rem;
+        border-radius: var(--radius-lg);
+        text-align: center;
+        background: var(--surface);
+        border: 1px dashed rgba(200, 181, 221, 0.28);
+        color: var(--muted);
+      }
+
+      footer {
+        padding: 2rem 0 2.5rem;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.94rem;
+      }
+
+      @media (max-width: 1120px) {
+        .products-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .product-card img {
+          height: 170px;
+        }
+
+        .hero-grid,
+        .contact-wrap {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 860px) {
+        .trust-grid,
+        .steps-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .products-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .product-card img {
+          height: 150px;
+        }
+
+        .hero-points {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 760px) {
+        .topbar {
+          position: static;
+        }
+
+        .nav {
+          align-items: center;
+          flex-wrap: wrap;
+          border-radius: 24px;
+          padding: 0.9rem 1rem;
+        }
+
+        .brand {
+          flex: 1;
+          min-width: 0;
+        }
+
+        .brand-text strong {
+          font-size: 0.95rem;
+          line-height: 1.2;
+        }
+
+        .brand-text span {
+          font-size: 0.76rem;
+        }
+
+        .nav-links {
+          display: none;
+        }
+
+        .menu-toggle {
+          display: block;
+        }
+
+        .menu-toggle[open] {
+          width: 100%;
+        }
+
+        .section {
+          padding: 3.2rem 0;
+        }
+
+        .hero {
+          padding: 1rem 0 2.6rem;
+        }
+
+        .hero-copy,
+        .search-card,
+        .trust-card,
+        .step-card,
+        .contact-card {
+          padding: 1.2rem;
+        }
+
+        .hero-copy p,
+        .search-header p,
+        .section-head p,
+        .contact-card p {
+          font-size: 0.96rem;
+        }
+
+        .hero-actions,
+        .contact-actions {
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        .btn {
+          width: 100%;
+        }
+
+        .products-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .product-card {
+          grid-template-columns: 108px 1fr;
+          grid-template-rows: none;
+          align-items: stretch;
+        }
+
+        .hero-image img,
+        .contact-visual img {
+          min-height: 320px;
+        }
+
+        .product-card img {
+          height: 100%;
+          min-height: 100%;
+        }
+
+        .product-body {
+          padding: 0.9rem;
+          gap: 0.65rem;
+        }
+
+        .product-body p,
+        .tag-chip {
+          font-size: 0.78rem;
+        }
+
+        .results-meta {
+          font-size: 0.86rem;
+        }
+
+        .menu-panel .btn {
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 520px) {
+        .container {
+          width: min(100% - 1rem, 1180px);
+        }
+
+        .topbar {
+          padding-top: 0.75rem;
+        }
+
+        .hero-image img,
+        .contact-visual img {
+          min-height: 260px;
+        }
+
+        .hero-badge {
+          left: 0.85rem;
+          right: 0.85rem;
+          bottom: 0.85rem;
+          max-width: none;
+        }
+
+        .search-input {
+          padding: 0.95rem 1rem;
+          font-size: 0.95rem;
+        }
+
+        .product-card {
+          grid-template-columns: 92px 1fr;
+        }
+
+        .product-body h3 {
+          font-size: 1rem;
+        }
+
+        .tag-chip {
+          padding: 0.3rem 0.55rem;
+        }
+      }
+
+      .topbar {
+        z-index: 24;
+      }
+
+      .nav,
+      .menu-panel,
+      .hero-copy,
+      .search-card,
+      .trust-card,
+      .step-card,
+      .contact-card {
+        border-color: rgba(15, 118, 110, 0.12);
+      }
+
+      .nav {
+        background: rgba(255, 255, 255, 0.84);
+      }
+
+      .brand-mark {
+        color: #ffffff;
+        background:
+          linear-gradient(145deg, rgba(255, 255, 255, 0.14), transparent),
+          linear-gradient(135deg, var(--green), var(--sage));
+        box-shadow: 0 16px 28px rgba(15, 118, 110, 0.22);
+      }
+
+      .hero-copy {
+        background:
+          linear-gradient(
+            160deg,
+            rgba(255, 255, 255, 0.98),
+            rgba(247, 251, 250, 0.95)
+          );
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, var(--green), var(--sage));
+        color: #ffffff;
+      }
+
+      .btn-secondary {
+        color: var(--green-deep);
+      }
+
+      .hero-stats,
+      .catalog-legend,
+      .service-grid {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .hero-stats {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        margin-top: 1.5rem;
+      }
+
+      .hero-stat {
+        padding: 0.95rem 1rem;
+        border-radius: 20px;
+        background: rgba(9, 35, 31, 0.94);
+        color: rgba(255, 255, 255, 0.78);
+      }
+
+      .hero-stat strong {
+        display: block;
+        margin-bottom: 0.2rem;
+        color: #ffffff;
+        font-size: 1.02rem;
+      }
+
+      .hero-badge {
+        background: rgba(255, 255, 255, 0.92);
+        border-color: rgba(15, 118, 110, 0.12);
+        max-width: 280px;
+      }
+
+      .quick-searches {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.7rem;
+        margin-top: 1rem;
+      }
+
+      .search-chip {
+        padding: 0.72rem 1rem;
+        border-radius: 999px;
+        border: 1px solid rgba(15, 118, 110, 0.14);
+        background: linear-gradient(180deg, #ffffff, var(--surface-soft));
+        color: var(--green-deep);
+        font-weight: 700;
+        cursor: pointer;
+        transition:
+          transform var(--transition),
+          border-color var(--transition),
+          box-shadow var(--transition);
+      }
+
+      .search-chip:hover {
+        transform: translateY(-2px);
+        border-color: rgba(15, 118, 110, 0.24);
+        box-shadow: var(--shadow-soft);
+      }
+
+      .advisory-panel {
+        display: none;
+        margin-top: 1rem;
+        padding: 1rem 1.1rem;
+        border-radius: 20px;
+        background: linear-gradient(
+          135deg,
+          rgba(15, 118, 110, 0.08),
+          rgba(212, 177, 106, 0.14)
+        );
+        border: 1px solid rgba(15, 118, 110, 0.12);
+      }
+
+      .advisory-panel strong {
+        display: block;
+        margin-bottom: 0.15rem;
+        color: var(--green-deep);
+      }
+
+      .prescription-wrap {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 1.2rem;
+        align-items: stretch;
+      }
+
+      .prescription-card,
+      .prescription-info {
+        padding: 1.5rem;
+        border-radius: 24px;
+        background: rgba(255, 255, 255, 0.94);
+        border: 1px solid rgba(15, 118, 110, 0.12);
+        box-shadow: var(--shadow-soft);
+      }
+
+      .prescription-form {
+        display: grid;
+        gap: 0.95rem;
+      }
+
+      .field {
+        display: grid;
+        gap: 0.45rem;
+      }
+
+      .field label {
+        color: var(--green-deep);
+        font-size: 0.88rem;
+        font-weight: 800;
+      }
+
+      .field input,
+      .field textarea {
+        width: 100%;
+        border: 1px solid rgba(15, 118, 110, 0.16);
+        border-radius: 16px;
+        padding: 0.95rem 1rem;
+        background: #ffffff;
+        color: var(--text);
+        outline: none;
+        transition:
+          border-color var(--transition),
+          box-shadow var(--transition);
+      }
+
+      .field textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+
+      .field input:focus,
+      .field textarea:focus {
+        border-color: rgba(15, 118, 110, 0.32);
+        box-shadow: 0 0 0 4px rgba(15, 118, 110, 0.1);
+      }
+
+      .form-note,
+      .form-status {
+        font-size: 0.82rem;
+        color: var(--muted);
+      }
+
+      .form-status {
+        display: none;
+        padding: 0.82rem 0.9rem;
+        border-radius: 16px;
+        background: rgba(15, 118, 110, 0.08);
+      }
+
+      .prescription-points {
+        display: grid;
+        gap: 0.9rem;
+        margin-top: 1.1rem;
+      }
+
+      .prescription-point {
+        padding: 0.95rem 1rem;
+        border-radius: 18px;
+        background: linear-gradient(180deg, #ffffff, var(--surface-soft));
+        border: 1px solid rgba(15, 118, 110, 0.1);
+      }
+
+      .prescription-point strong {
+        display: block;
+        margin-bottom: 0.22rem;
+        color: var(--green-deep);
+      }
+
+      .catalog-legend {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        margin-bottom: 1.6rem;
+      }
+
+      .legend-card,
+      .service-card {
+        padding: 1.15rem;
+        border-radius: 22px;
+        background: rgba(255, 255, 255, 0.9);
+        border: 1px solid rgba(15, 118, 110, 0.1);
+        box-shadow: var(--shadow-soft);
+      }
+
+      .legend-card strong,
+      .service-card strong {
+        display: block;
+        margin-bottom: 0.35rem;
+        color: var(--green-deep);
+      }
+
+      .service-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .service-icon {
+        width: 50px;
+        height: 50px;
+        display: grid;
+        place-items: center;
+        margin-bottom: 1rem;
+        border-radius: 16px;
+        background: linear-gradient(135deg, rgba(212, 177, 106, 0.22), rgba(15, 118, 110, 0.16));
+        color: var(--green-deep);
+        font-weight: 800;
+      }
+
+      .products-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .product-body h3 {
+        font-size: 1rem;
+        line-height: 1.15;
+        margin-bottom: 0.2rem;
+      }
+
+      .product-body p {
+        font-size: 0.82rem;
+        line-height: 1.5;
+      }
+
+      .product-footer .btn {
+        padding: 0.8rem 0.95rem;
+        font-size: 0.8rem;
+        min-height: 42px;
+      }
+
+      .product-meta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.45rem;
+      }
+
+      .status-pill {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.3rem 0.56rem;
+        border-radius: 999px;
+        font-size: 0.68rem;
+        font-weight: 800;
+      }
+
+      .status-pill.in-stock {
+        background: rgba(30, 123, 79, 0.14);
+        color: #1e7b4f;
+      }
+
+      .status-pill.low-stock {
+        background: rgba(181, 110, 35, 0.16);
+        color: #b56e23;
+      }
+
+      .status-pill.rx {
+        background: rgba(154, 48, 48, 0.12);
+        color: #9a3030;
+      }
+
+      .status-pill.otc {
+        background: rgba(15, 118, 110, 0.1);
+        color: var(--green-deep);
+      }
+
+      .product-summary {
+        display: grid;
+        gap: 0.3rem;
+      }
+
+      .product-category {
+        color: var(--green);
+        font-size: 0.74rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .product-advice {
+        padding: 0.72rem;
+        border-radius: 16px;
+        background: linear-gradient(180deg, var(--surface-soft), var(--surface-tint));
+        border: 1px solid rgba(15, 118, 110, 0.1);
+      }
+
+      .product-advice strong {
+        display: block;
+        margin-bottom: 0.2rem;
+        color: var(--green-deep);
+        font-size: 0.8rem;
+      }
+
+      .product-advice span {
+        font-size: 0.76rem;
+        line-height: 1.45;
+      }
+
+      .product-footer {
+        display: grid;
+        gap: 0.65rem;
+      }
+
+      .product-footnote {
+        display: flex;
+        justify-content: space-between;
+        gap: 0.7rem;
+        flex-wrap: wrap;
+        color: var(--muted);
+        font-size: 0.74rem;
+        line-height: 1.45;
+      }
+
+      @media (max-width: 1120px) {
+        .hero-stats,
+        .catalog-legend {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .prescription-wrap {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 860px) {
+        .catalog-legend,
+        .service-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .products-grid,
+        .hero-stats {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .product-card img {
+          height: 142px;
+        }
+
+        .product-body {
+          padding: 0.78rem;
+        }
+      }
+
+      @media (max-width: 760px) {
+        .hero-stats,
+        .products-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 760px) {
+        .container {
+          width: min(100% - 1.1rem, 1180px);
+        }
+
+        .section {
+          padding: 2.75rem 0;
+        }
+
+        .nav {
+          padding: 0.8rem 0.9rem;
+          border-radius: 22px;
+        }
+
+        .hero-copy,
+        .search-card,
+        .trust-card,
+        .step-card,
+        .service-card,
+        .contact-card,
+        .prescription-card,
+        .prescription-info,
+        .legend-card {
+          padding: 1rem;
+          border-radius: 20px;
+        }
+
+        .hero-copy p,
+        .section-head p,
+        .search-header p,
+        .contact-card p {
+          font-size: 0.93rem;
+        }
+
+        .hero-stat,
+        .legend-card,
+        .service-card {
+          padding: 0.9rem;
+        }
+
+        .quick-searches {
+          gap: 0.5rem;
+        }
+
+        .search-chip {
+          padding: 0.58rem 0.85rem;
+          font-size: 0.76rem;
+        }
+
+        .results-meta {
+          gap: 0.45rem;
+          font-size: 0.82rem;
+        }
+
+        .product-card {
+          grid-template-columns: 74px 1fr;
+          border-radius: 18px;
+        }
+
+        .product-card img {
+          width: 100%;
+          height: 100%;
+          min-height: 100%;
+          object-fit: cover;
+        }
+
+        .product-body {
+          gap: 0.48rem;
+          padding: 0.62rem;
+        }
+
+        .product-body h3 {
+          font-size: 0.86rem;
+          line-height: 1.15;
+          margin-bottom: 0.2rem;
+        }
+
+        .product-category,
+        .status-pill,
+        .tag-chip {
+          font-size: 0.62rem;
+        }
+
+        .status-pill,
+        .tag-chip {
+          padding: 0.22rem 0.42rem;
+        }
+
+        .product-body p,
+        .product-advice span,
+        .product-footnote {
+          font-size: 0.68rem;
+          line-height: 1.38;
+        }
+
+        .product-advice {
+          padding: 0.56rem;
+          border-radius: 12px;
+        }
+
+        .product-advice strong {
+          font-size: 0.72rem;
+          margin-bottom: 0.15rem;
+        }
+
+        .product-footer {
+          gap: 0.48rem;
+        }
+
+        .product-footer .btn {
+          padding: 0.66rem 0.72rem;
+          font-size: 0.72rem;
+          min-height: 38px;
+        }
+
+        .hero-badge {
+          padding: 0.9rem 1rem;
+          border-radius: 18px;
+        }
+
+        .field input,
+        .field textarea {
+          padding: 0.85rem 0.9rem;
+          font-size: 0.9rem;
+        }
+
+        .contact-actions,
+        .hero-actions {
+          gap: 0.75rem;
+        }
+      }
+
+      @media (max-width: 520px) {
+        .container {
+          width: min(100% - 0.8rem, 1180px);
+        }
+
+        .topbar {
+          padding-top: 0.55rem;
+        }
+
+        .brand-mark {
+          width: 44px;
+          height: 44px;
+          border-radius: 14px;
+        }
+
+        .brand-text strong {
+          font-size: 0.88rem;
+        }
+
+        .brand-text span {
+          font-size: 0.72rem;
+        }
+
+        .hero {
+          padding: 0.75rem 0 2rem;
+        }
+
+        .hero-copy,
+        .search-card,
+        .trust-card,
+        .step-card,
+        .service-card,
+        .contact-card,
+        .prescription-card,
+        .prescription-info,
+        .legend-card {
+          padding: 0.9rem;
+          border-radius: 18px;
+        }
+
+        .hero-image img,
+        .contact-visual img {
+          min-height: 240px;
+        }
+
+        .hero-badge {
+          left: 0.7rem;
+          right: 0.7rem;
+          bottom: 0.7rem;
+          padding: 0.8rem 0.9rem;
+        }
+
+        .hero-badge strong,
+        .hero-badge span,
+        .contact-lines,
+        .menu-contact span {
+          font-size: 0.82rem;
+        }
+
+        .search-input {
+          padding: 0.88rem 0.92rem;
+          font-size: 0.92rem;
+        }
+
+        .field input,
+        .field textarea {
+          padding: 0.78rem 0.82rem;
+          font-size: 0.84rem;
+          border-radius: 14px;
+        }
+
+        .field label,
+        .form-note,
+        .form-status {
+          font-size: 0.74rem;
+        }
+
+        .search-chip {
+          padding: 0.5rem 0.72rem;
+          font-size: 0.72rem;
+        }
+
+        .product-card {
+          grid-template-columns: 64px 1fr;
+          border-radius: 16px;
+        }
+
+        .product-body {
+          padding: 0.52rem;
+          gap: 0.42rem;
+        }
+
+        .product-body h3 {
+          font-size: 0.8rem;
+        }
+
+        .product-body p,
+        .product-advice span,
+        .product-footnote,
+        .results-meta {
+          font-size: 0.64rem;
+        }
+
+        .product-advice {
+          padding: 0.5rem;
+        }
+
+        .product-advice strong {
+          font-size: 0.68rem;
+        }
+
+        .status-pill,
+        .tag-chip {
+          font-size: 0.58rem;
+          padding: 0.2rem 0.36rem;
+        }
+
+        .product-footer .btn {
+          padding: 0.58rem 0.66rem;
+          font-size: 0.66rem;
+          border-radius: 12px;
+          min-height: 34px;
+        }
+
+        .hero-actions .btn,
+        .contact-actions .btn,
+        .menu-panel .btn {
+          min-height: 44px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container">
+        <nav class="nav">
+          <a href="#top" class="brand">
+            <span class="brand-mark">K</span>
+            <span class="brand-text">
+              <strong>Kennog Pharmacy</strong>
+              <span>Trusted care, verified stock, smart ordering in Isolo</span>
+            </span>
+          </a>
+          <div class="nav-links">
+            <a href="#search">Search</a>
+            <a href="#prescription">Prescription</a>
+            <a href="#products">Products</a>
+            <a href="#trust">Trust</a>
+            <a href="#services">Services</a>
+            <a href="#how">How It Works</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <details class="menu-toggle">
+            <summary aria-label="Open menu">
+              <span class="burger"></span>
+            </summary>
+            <div class="menu-panel">
+              <div class="menu-links">
+                <a href="#search">Search</a>
+                <a href="#prescription">Prescription</a>
+                <a href="#products">Products</a>
+                <a href="#trust">Trust</a>
+                <a href="#services">Services</a>
+                <a href="#how">How It Works</a>
+                <a href="#contact">Contact</a>
+              </div>
+              <div class="menu-contact">
+                <b>Quick Contact</b>
+                <span>08063689039</span>
+                <span>8 Okeho Street, Ire-Akari Estate Rd, Isolo, Lagos</span>
+              </div>
+              <a
+                class="btn btn-primary"
+                href="https://wa.me/2348063689039?text=Hello%20Kennog%20Pharmacy%2C%20I%20would%20like%20to%20make%20an%20enquiry."
+                target="_blank"
+                rel="noopener noreferrer"
+                >Order on WhatsApp</a
+              >
+            </div>
+          </details>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">Premium Community Pharmacy</span>
+            <h1>Kennog Pharmacy helps Lagos customers order with confidence.</h1>
+            <p>
+              Built for real pharmacy operations in Isolo, this experience
+              combines trusted product discovery, pharmacist-aware guidance, and
+              fast WhatsApp ordering that feels professional from first click to
+              confirmation.
+            </p>
+            <p>
+              Search by medicine name, illness, or symptom. Instantly see stock
+              cues, prescription flags, and pharmacist notes before you message
+              the store.
+            </p>
+            <div class="hero-actions">
+              <a
+                class="btn btn-primary"
+                href="https://wa.me/2348063689039?text=Hello%20Kennog%20Pharmacy%2C%20I%20want%20to%20place%20an%20order."
+                target="_blank"
+                rel="noopener noreferrer"
+                >Order on WhatsApp</a
+              >
+              <a class="btn btn-secondary" href="#products">Browse Products</a>
+            </div>
+            <div class="hero-stats">
+              <div class="hero-stat">
+                <strong>20+</strong>
+                <span>everyday pharmacy essentials in the catalog</span>
+              </div>
+              <div class="hero-stat">
+                <strong>Isolo</strong>
+                <span>local support from a Lagos neighborhood pharmacy</span>
+              </div>
+              <div class="hero-stat">
+                <strong>Rx Ready</strong>
+                <span>prescription-required items are clearly marked</span>
+              </div>
+              <div class="hero-stat">
+                <strong>Smart Search</strong>
+                <span>search by malaria, pain, cough, fever, and more</span>
+              </div>
+            </div>
+            <div class="hero-points">
+              <div class="hero-point">
+                <strong>Verified stock cues</strong>
+                <span>Customers can see in-stock and low-stock products before they enquire.</span>
+              </div>
+              <div class="hero-point">
+                <strong>Pharmacist-aware guidance</strong>
+                <span>Advice blocks and prescription tags build trust and reduce confusion.</span>
+              </div>
+              <div class="hero-point">
+                <strong>WhatsApp-first ordering</strong>
+                <span>Every product opens a tailored message for faster business conversations.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="hero-image">
+              <img
+                src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=1200&q=80"
+                alt="Premium pharmacy shelves"
+              />
+              <div class="hero-badge">
+                <strong>Kennog Pharmacy, Isolo Lagos</strong>
+                <span>8 Okeho Street, Ire-Akari Estate Rd, with quick order support on WhatsApp.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="search">
+        <div class="container search-wrap">
+          <div class="search-card">
+            <div class="search-header">
+              <div>
+                <span class="eyebrow">Medication Finder</span>
+                <h2>Search like a customer actually thinks</h2>
+                <p>
+                  Search by medicine name, illness, or symptom. Try queries like
+                  malaria, pain, infection, stomach upset, catarrh, or
+                  Paracetamol.
+                </p>
+              </div>
+            </div>
+            <input
+              id="searchInput"
+              class="search-input"
+              type="text"
+              placeholder="Search medicines or what you're treating (e.g. malaria, pain, cough, Paracetamol)"
+            />
+            <div id="quickSearches" class="quick-searches"></div>
+            <div class="results-meta">
+              <span id="resultsCount">Showing featured products</span>
+              <span id="resultsHint"
+                >Search works with medicine names, illness types, and
+                symptoms</span
+              >
+            </div>
+            <div id="queryAssist" class="advisory-panel">
+              <strong>Pharmacy guidance</strong>
+              <p id="queryAssistText"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="products">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">Business Grade Catalog</span>
+            <h2>Medication discovery built for trust and action</h2>
+            <p>
+              This catalog does more than display products. It prioritizes
+              illness-based results, shows stock signals, marks prescription
+              medicines clearly, and guides customers toward the right next
+              step.
+            </p>
+          </div>
+          <div class="catalog-legend">
+            <div class="legend-card">
+              <strong>In Stock / Low Stock</strong>
+              <p>Customers see availability cues immediately before ordering.</p>
+            </div>
+            <div class="legend-card">
+              <strong>Requires Prescription</strong>
+              <p>Higher-risk medicines are clearly flagged for professional handling.</p>
+            </div>
+            <div class="legend-card">
+              <strong>Pharmacist Advice</strong>
+              <p>Every listing carries useful context that feels credible and practical.</p>
+            </div>
+            <div class="legend-card">
+              <strong>WhatsApp Ready</strong>
+              <p>The order button opens with the product name and context already included.</p>
+            </div>
+          </div>
+          <div id="productsGrid" class="products-grid"></div>
+          <div id="emptyState" class="empty-state">
+            No matching product found. Try another medicine, illness, or symptom
+            like malaria, pain, infection, cough, stomach upset, or fever.
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="prescription">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">Prescription Desk</span>
+            <h2>Send a prescription or drug request straight to WhatsApp</h2>
+            <p>
+              Customers can type the drug name, add extra notes, and continue
+              directly to WhatsApp with the message already prepared.
+            </p>
+          </div>
+          <div class="prescription-wrap">
+            <div class="prescription-card">
+              <form id="prescriptionForm" class="prescription-form">
+                <div class="field">
+                  <label for="drugName">Drug name or product request</label>
+                  <input
+                    id="drugName"
+                    type="text"
+                    placeholder="Example: Amoxicillin 500mg or malaria drugs"
+                  />
+                </div>
+                <div class="field">
+                  <label for="customerMessage">Additional message</label>
+                  <textarea
+                    id="customerMessage"
+                    placeholder="Add symptoms, preferred brand, quantity, or any instruction for the pharmacist"
+                  ></textarea>
+                </div>
+                <div class="form-note">
+                  Tap the button below to open Kennog Pharmacy directly in
+                  WhatsApp with your message already prepared. You can then add
+                  your prescription as an attachment inside WhatsApp before
+                  sending.
+                </div>
+                <div id="formStatus" class="form-status"></div>
+                <button id="sendPrescription" class="btn btn-primary" type="submit">
+                  Send Your Message
+                </button>
+              </form>
+            </div>
+            <div class="prescription-info">
+              <span class="eyebrow">How This Works</span>
+              <h3>Designed for quick pharmacy enquiries</h3>
+              <p>
+                This gives customers a cleaner path than a plain chat link,
+                especially when they want to send a prescription before asking
+                for availability.
+              </p>
+              <div class="prescription-points">
+                <div class="prescription-point">
+                  <strong>1. Add the request</strong>
+                  <span>Enter the drug name or leave a short note for the pharmacist.</span>
+                </div>
+                <div class="prescription-point">
+                  <strong>2. Attach the prescription</strong>
+                  <span>When WhatsApp opens, use the attachment icon to add the prescription image or file.</span>
+                </div>
+                <div class="prescription-point">
+                  <strong>3. Continue to WhatsApp</strong>
+                  <span>Your message opens directly in Kennog Pharmacy's WhatsApp chat, ready to send.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="trust">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">Why Customers Trust Us</span>
+            <h2>Structured like a real pharmacy, not a generic online catalog</h2>
+            <p>
+              Kennog Pharmacy is presented to feel dependable, compliant, and
+              helpful at every step of the journey.
+            </p>
+          </div>
+          <div class="trust-grid">
+            <div class="trust-card">
+              <div class="check">01</div>
+              <strong>Genuine product positioning</strong>
+              <p>
+                Clear medication categories, thoughtful language, and
+                pharmacy-aware details improve perceived credibility instantly.
+              </p>
+            </div>
+            <div class="trust-card">
+              <div class="check">02</div>
+              <strong>Decision support built in</strong>
+              <p>
+                Illness-based search and product guidance help customers find
+                relevant options faster without feeling lost.
+              </p>
+            </div>
+            <div class="trust-card">
+              <div class="check">03</div>
+              <strong>Operationally useful ordering</strong>
+              <p>
+                WhatsApp flows, stock cues, and prescription messaging help the
+                business convert more enquiries into cleaner conversations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">Service Experience</span>
+            <h2>Features that make this feel ready for a serious pharmacy business</h2>
+            <p>
+              The page now communicates both customer convenience and owner-side
+              control, which is what moves this from "nice demo" to "usable
+              digital storefront."
+            </p>
+          </div>
+          <div class="service-grid">
+            <div class="service-card">
+              <div class="service-icon">Rx</div>
+              <strong>Prescription-aware ordering</strong>
+              <p>
+                Products that need pharmacist review are labeled clearly before
+                the customer reaches WhatsApp.
+              </p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">IQ</div>
+              <strong>Search by illness intelligence</strong>
+              <p>
+                Queries like malaria, pain, diarrhea, allergy, and stomach upset
+                surface the most relevant medicines first.
+              </p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">24</div>
+              <strong>Fast-response digital workflow</strong>
+              <p>
+                Tailored order messages reduce back-and-forth and help staff
+                respond faster to each enquiry.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="how">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">How It Works</span>
+            <h2>Simple ordering with stronger pharmacy logic</h2>
+          </div>
+          <div class="steps-grid">
+            <div class="step-card">
+              <div class="step-number">1</div>
+              <strong>Search by medicine or illness</strong>
+              <p>
+                Type a name like Ibuprofen or a condition like malaria, cough,
+                infection, or stomach pain.
+              </p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">2</div>
+              <strong>Review the product context</strong>
+              <p>
+                Check the stock badge, prescription status, and pharmacist
+                advice before you place the enquiry.
+              </p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">3</div>
+              <strong>Send a guided WhatsApp order</strong>
+              <p>
+                Tap the button, send the prefilled request, and continue with
+                Kennog Pharmacy for availability and confirmation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container contact-wrap">
+          <div class="contact-card">
+            <span class="eyebrow">Contact</span>
+            <h2>Need help with an order or product availability?</h2>
+            <p>
+              Reach Kennog Pharmacy directly for stock confirmation,
+              prescription handling, order support, and fast local response in
+              Isolo, Lagos.
+            </p>
+            <div class="contact-actions">
+              <a
+                class="btn btn-primary"
+                href="https://wa.me/2348063689039?text=Hello%20Kennog%20Pharmacy%2C%20I%20want%20to%20make%20an%20enquiry."
+                target="_blank"
+                rel="noopener noreferrer"
+                >Chat on WhatsApp</a
+              >
+              <a
+                class="btn btn-secondary"
+                href="https://www.google.com/maps/search/?api=1&query=8%20Okeho%20Street%2C%20Ire-Akari%20Estate%20Rd%2C%20Isolo%2C%20Lagos"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Get Directions</a
+              >
+            </div>
+            <div class="contact-lines">
+              <div><strong>Business:</strong> Kennog Pharmacy</div>
+              <div><strong>Phone:</strong> 08063689039</div>
+              <div>
+                <strong>Location:</strong> 8 Okeho Street, Ire-Akari Estate Rd,
+                Isolo, Lagos
+              </div>
+              <div>
+                <strong>Support:</strong> Product enquiries, guided ordering,
+                and pharmacist-aware assistance on WhatsApp
+              </div>
+            </div>
+          </div>
+          <div class="contact-visual">
+            <img
+              src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1200&q=80"
+              alt="Pharmacy customer support desk"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>
+          &copy; 2026 Kennog Pharmacy. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      const products = [
+        {
+          name: "Paracetamol",
+          image:
+            "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=900&q=80",
+          description:
+            "A trusted pain and fever relief medicine commonly used for headaches, body pain, and mild fever.",
+          tags: ["headache", "pain", "fever", "body pain"],
+          featured: true,
+        },
+        {
+          name: "Artemether Lumefantrine",
+          image:
+            "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&w=900&q=80",
+          description:
+            "A common antimalarial treatment often used when managing malaria symptoms and recurring fever.",
+          tags: ["malaria", "fever", "body weakness"],
+          featured: true,
+        },
+        {
+          name: "Cough Syrup",
+          image:
+            "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?auto=format&fit=crop&w=900&q=80",
+          description:
+            "Helpful relief for cough, throat irritation, and common cold discomfort.",
+          tags: ["cough", "cold", "throat", "catarrh"],
+          featured: true,
+        },
+        {
+          name: "Vitamin C",
+          image:
+            "https://images.unsplash.com/photo-1615486511484-92e172cc4fe0?auto=format&fit=crop&w=900&q=80",
+          description:
+            "Daily immune support and wellness supplement for general health and recovery.",
+          tags: ["immunity", "vitamin", "wellness", "recovery"],
+          featured: true,
+        },
+        {
+          name: "Amoxicillin",
+          image:
+            "https://images.unsplash.com/photo-1628771065518-0d82f1938462?auto=format&fit=crop&w=900&q=80",
+          description:
+            "A widely used antibiotic available with proper pharmacy guidance and treatment advice.",
+          tags: ["infection", "antibiotic", "bacteria", "fever"],
+        },
+        {
+          name: "ORS Sachets",
+          image:
+            "https://images.unsplash.com/photo-1579165466741-7f35e4755660?auto=format&fit=crop&w=900&q=80",
+          description:
+            "Oral rehydration support for dehydration, diarrhea, and fluid replacement needs.",
+          tags: ["dehydration", "diarrhea", "stomach", "weakness"],
+        },
+        {
+          name: "Antacid Tablets",
+          image:
+            "https://images.unsplash.com/photo-1584362917165-526a968579e8?auto=format&fit=crop&w=900&q=80",
+          description:
+            "Quick relief for heartburn, indigestion, and stomach discomfort after meals.",
+          tags: ["ulcer", "heartburn", "indigestion", "stomach pain"],
+        },
+        {
+          name: "Allergy Relief",
+          image:
+            "https://images.unsplash.com/photo-1628771065518-0d82f1938462?auto=format&fit=crop&w=900&q=80",
+          description:
+            "Support for sneezing, itching, and mild allergic reactions caused by dust or seasonal triggers.",
+          tags: ["allergy", "itching", "sneezing", "catarrh"],
+        },
+        {
+          name: "Blood Tonic",
+          image:
+            "https://images.unsplash.com/photo-1512069772995-ec65ed45afd6?auto=format&fit=crop&w=900&q=80",
+          description:
+            "A supportive tonic commonly used to improve energy levels and daily nutritional balance.",
+          tags: ["blood tonic", "weakness", "energy", "fatigue"],
+        },
+        {
+          name: "Ibuprofen",
+          image:
+            "https://images.unsplash.com/photo-1580281658629-33c43f5f1f3b?auto=format&fit=crop&w=900&q=80",
+          description:
+            "Pain and inflammation relief for headaches, menstrual pain, and muscle discomfort.",
+          tags: ["pain", "headache", "inflammation", "menstrual pain"],
+        },
+        {
+          name: "Flagyl",
+          image:
+            "https://images.unsplash.com/photo-1585435557343-3b092031a831?auto=format&fit=crop&w=900&q=80",
+          description:
+            "Commonly requested support for stomach infections, diarrhea, and related discomfort.",
+          tags: ["diarrhea", "stomach infection", "toilet", "infection"],
+        },
+        {
+          name: "Diclofenac",
+          image:
+            "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&w=900&q=80",
+          description:
+            "Pain relief often used for joint discomfort, swelling, and muscle aches.",
+          tags: ["pain", "joint pain", "swelling", "back pain"],
+        },
+        {
+          name: "Loratadine",
+          image:
+            "https://images.unsplash.com/photo-1612531386530-97286d97c2d2?auto=format&fit=crop&w=900&q=80",
+          description:
+            "Allergy relief for sneezing, itching, runny nose, and other mild reactions.",
+          tags: ["allergy", "runny nose", "itching", "sneezing"],
+        },
+        {
+          name: "Salbutamol Inhaler",
+          image:
+            "https://images.unsplash.com/photo-1576602976047-174e57a47881?auto=format&fit=crop&w=900&q=80",
+          description:
+            "Quick breathing support often used for asthma symptoms and chest tightness.",
+          tags: ["asthma", "breathing", "chest tightness", "wheezing"],
+        },
+        {
+          name: "Cetirizine",
+          image:
+            "https://images.unsplash.com/photo-1628771065518-0d82f1938462?auto=format&fit=crop&w=900&q=80",
+          description:
+            "Daily allergy support for itching, catarrh, watery eyes, and skin irritation.",
+          tags: ["allergy", "catarrh", "itching", "watery eyes"],
+        },
+        {
+          name: "Zinc Tablets",
+          image:
+            "https://images.unsplash.com/photo-1615486363973-f79d875780fa?auto=format&fit=crop&w=900&q=80",
+          description:
+            "Nutritional support commonly used for immunity, recovery, and general wellness.",
+          tags: ["immunity", "supplement", "recovery", "wellness"],
+        },
+        {
+          name: "Pregnancy Test Kit",
+          image:
+            "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=900&q=80",
+          description:
+            "Simple home test kit for early pregnancy checks and quick confirmation.",
+          tags: ["pregnancy", "missed period", "test kit", "women health"],
+        },
+        {
+          name: "Flu Relief Capsules",
+          image:
+            "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=900&q=80",
+          description:
+            "Support for flu symptoms like catarrh, body pain, sneezing, and fever.",
+          tags: ["flu", "catarrh", "fever", "body pain"],
+        },
+        {
+          name: "Hydrogen Peroxide",
+          image:
+            "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=900&q=80",
+          description:
+            "Useful antiseptic support for minor wound cleaning and first aid needs.",
+          tags: ["wound", "antiseptic", "injury", "first aid"],
+        },
+        {
+          name: "Gentamicin Cream",
+          image:
+            "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?auto=format&fit=crop&w=900&q=80",
+          description:
+            "Topical support commonly used for minor skin infections and irritation.",
+          tags: ["skin infection", "rash", "cream", "wound"],
+        },
+        {
+          name: "Buscopan",
+          image:
+            "https://images.unsplash.com/photo-1580281658629-33c43f5f1f3b?auto=format&fit=crop&w=900&q=80",
+          description:
+            "Common relief for stomach cramps, abdominal discomfort, and period pain.",
+          tags: ["stomach pain", "cramps", "abdominal pain", "period pain"],
+        },
+        {
+          name: "Eye Drops",
+          image:
+            "https://images.unsplash.com/photo-1584362917165-526a968579e8?auto=format&fit=crop&w=900&q=80",
+          description:
+            "Helpful support for dry eyes, redness, and mild eye irritation.",
+          tags: ["eye pain", "red eyes", "dry eyes", "eye irritation"],
+        },
+        {
+          name: "Glucose D",
+          image:
+            "https://images.unsplash.com/photo-1512069772995-ec65ed45afd6?auto=format&fit=crop&w=900&q=80",
+          description:
+            "Quick energy support for weakness, low strength, and general recovery.",
+          tags: ["weakness", "energy", "fatigue", "recovery"],
+        },
+      ];
+
+      const businessName = "Kennog Pharmacy";
+      const whatsappNumber = "2348063689039";
+      const quickSearchKeywords = [
+        "malaria",
+        "pain",
+        "cough",
+        "infection",
+        "allergy",
+        "stomach upset",
+        "diarrhea",
+        "catarrh",
+      ];
+
+      const productDetails = {
+        Paracetamol: {
+          illnesses: ["pain", "headache", "fever"],
+          category: "Pain Relief",
+          stock: "In Stock",
+          prescription: false,
+          advice:
+            "Suitable for common pain and fever relief. Follow label instructions and ask the pharmacist if symptoms persist.",
+        },
+        "Artemether Lumefantrine": {
+          illnesses: ["malaria", "fever", "body weakness"],
+          category: "Antimalarial",
+          stock: "In Stock",
+          prescription: true,
+          advice:
+            "Best used after pharmacist review, especially when fever is recurring or symptoms are severe.",
+        },
+        "Cough Syrup": {
+          illnesses: ["cough", "cold", "catarrh", "throat irritation"],
+          category: "Respiratory Relief",
+          stock: "In Stock",
+          prescription: false,
+          advice:
+            "Useful for everyday cough symptoms. Ask the pharmacist if cough lasts beyond a few days.",
+        },
+        "Vitamin C": {
+          illnesses: ["immunity", "recovery", "wellness"],
+          category: "Supplements",
+          stock: "In Stock",
+          prescription: false,
+          advice:
+            "A common supplement for general wellness support and recovery routines.",
+        },
+        Amoxicillin: {
+          illnesses: ["infection", "bacterial infection", "fever"],
+          category: "Antibiotics",
+          stock: "Low Stock",
+          prescription: true,
+          advice:
+            "Requires pharmacist review and should be used only when appropriate for the condition being treated.",
+        },
+        "ORS Sachets": {
+          illnesses: ["diarrhea", "dehydration", "stomach upset", "weakness"],
+          category: "Hydration Support",
+          stock: "In Stock",
+          prescription: false,
+          advice:
+            "A useful first-line support for fluid replacement. Contact the pharmacist if dehydration appears serious.",
+        },
+        "Antacid Tablets": {
+          illnesses: ["heartburn", "indigestion", "stomach upset", "stomach pain"],
+          category: "Digestive Relief",
+          stock: "In Stock",
+          prescription: false,
+          advice:
+            "Helpful for common indigestion complaints. Ask for guidance if symptoms are frequent or severe.",
+        },
+        "Allergy Relief": {
+          illnesses: ["allergy", "catarrh", "itching", "sneezing"],
+          category: "Allergy Care",
+          stock: "In Stock",
+          prescription: false,
+          advice:
+            "Useful for mild allergy symptoms. Speak with the pharmacist if reactions are persistent or worsening.",
+        },
+        "Blood Tonic": {
+          illnesses: ["weakness", "fatigue", "energy support"],
+          category: "Wellness Tonics",
+          stock: "Low Stock",
+          prescription: false,
+          advice:
+            "Often requested for general wellness support. Pharmacist advice is useful where fatigue is persistent.",
+        },
+        Ibuprofen: {
+          illnesses: ["pain", "headache", "inflammation", "period pain"],
+          category: "Pain Relief",
+          stock: "In Stock",
+          prescription: false,
+          advice:
+            "Commonly used for pain and inflammation. Ask the pharmacist if you have ulcer concerns or special conditions.",
+        },
+        Flagyl: {
+          illnesses: ["diarrhea", "infection", "stomach upset", "stomach infection"],
+          category: "Digestive Care",
+          stock: "Low Stock",
+          prescription: true,
+          advice:
+            "Requires pharmacist guidance, especially when stomach symptoms are severe or recurring.",
+        },
+        Diclofenac: {
+          illnesses: ["pain", "joint pain", "swelling", "back pain"],
+          category: "Pain Relief",
+          stock: "Low Stock",
+          prescription: true,
+          advice:
+            "Better handled with pharmacist review where swelling, joint issues, or prolonged pain is involved.",
+        },
+        Loratadine: {
+          illnesses: ["allergy", "runny nose", "itching", "catarrh"],
+          category: "Allergy Care",
+          stock: "In Stock",
+          prescription: false,
+          advice:
+            "A go-to option for common allergy symptoms. Contact the pharmacist for use guidance if needed.",
+        },
+        "Salbutamol Inhaler": {
+          illnesses: ["asthma", "breathing support", "wheezing", "chest tightness"],
+          category: "Respiratory Care",
+          stock: "In Stock",
+          prescription: true,
+          advice:
+            "Requires pharmacist or clinician guidance, especially for first-time users or worsening symptoms.",
+        },
+        Cetirizine: {
+          illnesses: ["allergy", "catarrh", "itching", "watery eyes"],
+          category: "Allergy Care",
+          stock: "In Stock",
+          prescription: false,
+          advice:
+            "Suitable for everyday allergy symptoms. The pharmacist can guide on the best option for your case.",
+        },
+        "Zinc Tablets": {
+          illnesses: ["immunity", "recovery", "wellness"],
+          category: "Supplements",
+          stock: "In Stock",
+          prescription: false,
+          advice:
+            "A practical supplement option for general recovery and everyday wellness support.",
+        },
+        "Pregnancy Test Kit": {
+          illnesses: ["pregnancy", "women health", "missed period"],
+          category: "Women's Health",
+          stock: "In Stock",
+          prescription: false,
+          advice:
+            "Useful for early checks. The pharmacist can advise on next steps after the result.",
+        },
+        "Flu Relief Capsules": {
+          illnesses: ["flu", "catarrh", "fever", "body pain"],
+          category: "Respiratory Relief",
+          stock: "In Stock",
+          prescription: false,
+          advice:
+            "Helpful for flu-like discomfort. Ask the pharmacist if fever is persistent or high.",
+        },
+        "Hydrogen Peroxide": {
+          illnesses: ["wound", "first aid", "injury"],
+          category: "First Aid",
+          stock: "In Stock",
+          prescription: false,
+          advice:
+            "A practical first-aid item. Ask the pharmacist if the wound needs stronger clinical attention.",
+        },
+        "Gentamicin Cream": {
+          illnesses: ["skin infection", "rash", "wound care"],
+          category: "Skin Care",
+          stock: "Low Stock",
+          prescription: true,
+          advice:
+            "Needs pharmacist guidance to confirm the condition is suitable for topical treatment.",
+        },
+        Buscopan: {
+          illnesses: ["stomach pain", "cramps", "period pain", "abdominal pain"],
+          category: "Digestive Relief",
+          stock: "In Stock",
+          prescription: false,
+          advice:
+            "Often used for cramps and stomach discomfort. Ask for guidance when pain is severe or recurring.",
+        },
+        "Eye Drops": {
+          illnesses: ["red eyes", "dry eyes", "eye irritation"],
+          category: "Eye Care",
+          stock: "In Stock",
+          prescription: false,
+          advice:
+            "Good for mild dryness or irritation. Consult the pharmacist if symptoms are painful or persistent.",
+        },
+        "Glucose D": {
+          illnesses: ["weakness", "recovery", "energy support"],
+          category: "Wellness Support",
+          stock: "In Stock",
+          prescription: false,
+          advice:
+            "Helpful for short-term energy support. Ask the pharmacist if weakness is frequent or unexplained.",
+        },
+      };
+
+      const conditionMap = {
+        malaria: ["Artemether Lumefantrine"],
+        fever: ["Paracetamol", "Artemether Lumefantrine", "Flu Relief Capsules"],
+        pain: ["Paracetamol", "Ibuprofen", "Diclofenac", "Buscopan"],
+        headache: ["Paracetamol", "Ibuprofen"],
+        cough: ["Cough Syrup", "Flu Relief Capsules"],
+        infection: ["Amoxicillin", "Flagyl", "Gentamicin Cream"],
+        allergy: ["Allergy Relief", "Cetirizine", "Loratadine"],
+        diarrhea: ["ORS Sachets", "Flagyl"],
+        "stomach upset": ["Antacid Tablets", "Buscopan", "ORS Sachets", "Flagyl"],
+        catarrh: ["Cough Syrup", "Flu Relief Capsules", "Cetirizine", "Allergy Relief"],
+        asthma: ["Salbutamol Inhaler"],
+        wound: ["Hydrogen Peroxide", "Gentamicin Cream"],
+        weakness: ["Blood Tonic", "Glucose D", "Vitamin C", "Zinc Tablets"],
+        pregnancy: ["Pregnancy Test Kit"],
+      };
+
+      const searchAliases = {
+        cold: ["catarrh", "cough", "flu"],
+        flu: ["catarrh", "fever", "body pain"],
+        ulcer: ["heartburn", "stomach upset"],
+        "body pain": ["pain"],
+        menstrual: ["period pain", "pain"],
+        "runny nose": ["allergy", "catarrh"],
+        tiredness: ["weakness", "fatigue"],
+      };
+
+      const guidanceMap = {
+        malaria:
+          "Malaria-related results are prioritized first. Severe or recurring fever should be reviewed by the pharmacist before treatment.",
+        infection:
+          "Infection-related products may require professional guidance. Prescription items are clearly labeled before you order.",
+        pregnancy:
+          "For pregnancy-related enquiries, the pharmacist can guide you on appropriate next steps and available products.",
+        asthma:
+          "Breathing-related medicines should be handled carefully. Speak with the pharmacist before ordering if symptoms are active.",
+        diarrhea:
+          "Hydration support is usually important with diarrhea. Speak with the pharmacist if symptoms are prolonged or severe.",
+      };
+
+      const productsGrid = document.getElementById("productsGrid");
+      const searchInput = document.getElementById("searchInput");
+      const resultsCount = document.getElementById("resultsCount");
+      const resultsHint = document.getElementById("resultsHint");
+      const emptyState = document.getElementById("emptyState");
+      const menuToggle = document.querySelector(".menu-toggle");
+      const quickSearches = document.getElementById("quickSearches");
+      const queryAssist = document.getElementById("queryAssist");
+      const queryAssistText = document.getElementById("queryAssistText");
+      const prescriptionForm = document.getElementById("prescriptionForm");
+      const drugNameInput = document.getElementById("drugName");
+      const customerMessageInput = document.getElementById("customerMessage");
+      const formStatus = document.getElementById("formStatus");
+
+      products.forEach((product) => {
+        Object.assign(product, productDetails[product.name] || {});
+      });
+
+      const featuredProducts = products.filter((product) => product.featured);
+
+      function normalize(value) {
+        return value.trim().toLowerCase();
+      }
+
+      function expandQuery(query) {
+        const raw = normalize(query);
+        const terms = new Set(raw.split(/\s+/).filter(Boolean));
+
+        Object.entries(searchAliases).forEach(([alias, mappedTerms]) => {
+          if (raw.includes(alias)) {
+            terms.add(alias);
+            mappedTerms.forEach((term) => terms.add(term));
+          }
+        });
+
+        Object.keys(conditionMap).forEach((condition) => {
+          if (raw.includes(condition)) {
+            terms.add(condition);
+          }
+        });
+
+        return Array.from(terms);
+      }
+
+      function getPriorityProducts(query) {
+        const raw = normalize(query);
+        const matchedConditions = Object.keys(conditionMap).filter((condition) =>
+          raw.includes(condition),
+        );
+        const prioritySet = new Set(
+          matchedConditions.flatMap((condition) => conditionMap[condition] || []),
+        );
+
+        return { matchedConditions, prioritySet };
+      }
+
+      function makeWhatsAppLink(product) {
+        const intro = `Hello ${businessName}, I would like to order ${product.name}.`;
+        const stockLine = `Availability seen on site: ${product.stock}.`;
+        const rxLine = product.prescription
+          ? "I understand this item requires pharmacist review."
+          : "Please confirm availability and next steps.";
+        const fullMessage = `${intro} ${stockLine} ${rxLine}`;
+
+        return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(fullMessage)}`;
+      }
+
+      function renderQuickSearches() {
+        quickSearches.innerHTML = quickSearchKeywords
+          .map(
+            (keyword) =>
+              `<button class="search-chip" type="button" data-query="${keyword}">${keyword}</button>`,
+          )
+          .join("");
+
+        quickSearches.querySelectorAll("[data-query]").forEach((button) => {
+          button.addEventListener("click", () => {
+            const query = button.dataset.query || "";
+            searchInput.value = query;
+            filterProducts(query);
+          });
+        });
+      }
+
+      function getStatusClass(stock) {
+        return stock === "Low Stock" ? "low-stock" : "in-stock";
+      }
+
+      function updateAssistPanel(query, matchedConditions, hasPrescriptionResult) {
+        const firstGuidance = matchedConditions.find((condition) => guidanceMap[condition]);
+
+        if (firstGuidance) {
+          queryAssist.style.display = "block";
+          queryAssistText.textContent = guidanceMap[firstGuidance];
+          return;
+        }
+
+        if (query && hasPrescriptionResult) {
+          queryAssist.style.display = "block";
+          queryAssistText.textContent =
+            "Some matching products require prescription or pharmacist review. Use the product details to choose carefully before ordering.";
+          return;
+        }
+
+        queryAssist.style.display = "none";
+        queryAssistText.textContent = "";
+      }
+
+      function setFormStatus(message) {
+        if (!message) {
+          formStatus.style.display = "none";
+          formStatus.textContent = "";
+          return;
+        }
+
+        formStatus.style.display = "block";
+        formStatus.textContent = message;
+      }
+
+      function buildPrescriptionMessage() {
+        const drugName = drugNameInput.value.trim();
+        const customerMessage = customerMessageInput.value.trim();
+        const lines = [
+          `Hello ${businessName}, I want to send a prescription or medicine request.`,
+        ];
+
+        if (drugName) {
+          lines.push(`Drug or request: ${drugName}`);
+        }
+
+        if (customerMessage) {
+          lines.push(`Message: ${customerMessage}`);
+        }
+
+        lines.push("Please review and confirm availability or next steps.");
+
+        return lines.join("\n");
+      }
+
+      function openWhatsAppChat(message) {
+        const appUrl = `whatsapp://send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
+        const webUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+        const start = Date.now();
+
+        window.location.href = appUrl;
+
+        window.setTimeout(() => {
+          if (Date.now() - start < 1600) {
+            window.location.href = webUrl;
+          }
+        }, 900);
+      }
+
+      function renderProducts(list, query = "", matchedConditions = []) {
+        productsGrid.innerHTML = list
+          .map(
+            (product) => `
+        <article class="product-card" data-name="${product.name.toLowerCase()}" data-tags="${product.tags.join(" ").toLowerCase()}">
+          <img src="${product.image}" alt="${product.name}">
+          <div class="product-body">
+            <div class="product-meta-row">
+              <span class="status-pill ${getStatusClass(product.stock)}">${product.stock}</span>
+              <span class="status-pill ${product.prescription ? "rx" : "otc"}">${product.prescription ? "Requires Prescription" : "Pharmacist Approved OTC"}</span>
+            </div>
+            <div class="product-summary">
+              <span class="product-category">${product.category}</span>
+              <div>
+                <h3>${product.name}</h3>
+                <p>${product.description}</p>
+              </div>
+            </div>
+            <div class="product-advice">
+              <strong>Pharmacist advice</strong>
+              <span>${product.advice}</span>
+            </div>
+            <div class="product-tags">
+              ${product.tags.map((tag) => `<span class="tag-chip">${tag}</span>`).join("")}
+            </div>
+            <div class="product-footer">
+              <div class="product-footnote">
+                <span>${product.stock === "Low Stock" ? "Limited stock, confirm before payment." : "Ready for availability confirmation on WhatsApp."}</span>
+                <span>${product.prescription ? "Pharmacist review may be needed." : "Quick OTC enquiry flow."}</span>
+              </div>
+              <a class="btn btn-primary" href="${makeWhatsAppLink(product)}" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+            </div>
+          </div>
+        </article>
+      `,
+          )
+          .join("");
+
+        const hasPrescriptionResult = list.some((product) => product.prescription);
+
+        if (query) {
+          resultsCount.textContent = `Found ${list.length} product${list.length === 1 ? "" : "s"} for "${query}"`;
+          resultsHint.textContent = matchedConditions.length
+            ? `Priority matches shown for ${matchedConditions.join(", ")}`
+            : "Search by medicine name, illness, or symptom";
+        } else {
+          resultsCount.textContent = `Showing ${list.length} featured product${list.length === 1 ? "" : "s"}`;
+          resultsHint.textContent = `${products.length - list.length}+ more medicines appear as soon as you search`;
+        }
+
+        updateAssistPanel(query, matchedConditions, hasPrescriptionResult);
+        emptyState.style.display = list.length ? "none" : "block";
+      }
+
+      function filterProducts(query) {
+        const raw = normalize(query);
+
+        if (!raw) {
+          renderProducts(featuredProducts);
+          return;
+        }
+
+        const searchTerms = expandQuery(query);
+        const { matchedConditions, prioritySet } = getPriorityProducts(query);
+
+        const scoredProducts = products
+          .map((product) => {
+            const haystack =
+              `${product.name} ${product.description} ${product.tags.join(" ")} ${product.illnesses.join(" ")} ${product.category}`.toLowerCase();
+            let score = 0;
+
+            if (product.name.toLowerCase().includes(raw)) {
+              score += 120;
+            }
+
+            if (prioritySet.has(product.name)) {
+              score += 90;
+            }
+
+            searchTerms.forEach((term) => {
+              if (product.name.toLowerCase().includes(term)) {
+                score += 40;
+              }
+
+              if (product.tags.some((tag) => tag.toLowerCase().includes(term))) {
+                score += 24;
+              }
+
+              if (product.illnesses.some((illness) => illness.toLowerCase().includes(term))) {
+                score += 24;
+              }
+
+              if (product.category.toLowerCase().includes(term)) {
+                score += 14;
+              }
+
+              if (haystack.includes(term)) {
+                score += 8;
+              }
+            });
+
+            if (product.featured) {
+              score += 4;
+            }
+
+            if (product.stock === "In Stock") {
+              score += 3;
+            }
+
+            return { product, score };
+          })
+          .filter((entry) => entry.score > 0)
+          .sort((left, right) => right.score - left.score)
+          .map((entry) => entry.product);
+
+        renderProducts(scoredProducts, query.trim(), matchedConditions);
+      }
+
+      searchInput.addEventListener("input", (event) => {
+        filterProducts(event.target.value);
+      });
+
+      if (prescriptionForm) {
+        prescriptionForm.addEventListener("submit", (event) => {
+          event.preventDefault();
+
+          const drugName = drugNameInput.value.trim();
+          const customerMessage = customerMessageInput.value.trim();
+
+          if (!drugName && !customerMessage) {
+            setFormStatus("Add a drug name or short message before continuing.");
+            return;
+          }
+
+          const message = buildPrescriptionMessage();
+          openWhatsAppChat(message);
+          setFormStatus(
+            "WhatsApp is opening directly to Kennog Pharmacy with your message ready. Add your prescription as an attachment in WhatsApp before sending.",
+          );
+        });
+      }
+
+      if (menuToggle) {
+        menuToggle.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            menuToggle.removeAttribute("open");
+          });
+        });
+      }
+
+      renderQuickSearches();
+      renderProducts(featuredProducts);
+    </script>
+  </body>
+</html>
