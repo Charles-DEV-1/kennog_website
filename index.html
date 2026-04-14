@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kennog Pharmacy | Trusted Pharmacy in Isolo, Lagos</title>
+    <title>Kennog Pharmacy | Trusted Pharmacy in Lagos</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
 
@@ -489,7 +489,7 @@
         background: rgba(255, 255, 255, 0.88);
         border: 1px solid var(--line);
         box-shadow: var(--shadow-soft);
-        max-width: 240px;
+        max-width: 280px;
       }
 
       .hero-badge strong {
@@ -556,7 +556,7 @@
 
       .products-grid {
         display: grid;
-        grid-template-columns: repeat(5, minmax(0, 1fr));
+        grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 1.1rem;
       }
 
@@ -586,6 +586,8 @@
 
       .product-card img {
         height: 168px;
+        width: 100%;
+        object-fit: cover;
       }
 
       .product-body {
@@ -738,271 +740,6 @@
         font-size: 0.94rem;
       }
 
-      @media (max-width: 1120px) {
-        .products-grid {
-          grid-template-columns: repeat(3, minmax(0, 1fr));
-        }
-
-        .product-card img {
-          height: 170px;
-        }
-
-        .hero-grid,
-        .contact-wrap {
-          grid-template-columns: 1fr;
-        }
-      }
-
-      @media (max-width: 860px) {
-        .trust-grid,
-        .steps-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .products-grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-
-        .product-card img {
-          height: 150px;
-        }
-
-        .hero-points {
-          grid-template-columns: 1fr;
-        }
-      }
-
-      @media (max-width: 760px) {
-        .topbar {
-          position: static;
-        }
-
-        .nav {
-          align-items: center;
-          flex-wrap: wrap;
-          border-radius: 24px;
-          padding: 0.9rem 1rem;
-        }
-
-        .brand {
-          flex: 1;
-          min-width: 0;
-        }
-
-        .brand-text strong {
-          font-size: 0.95rem;
-          line-height: 1.2;
-        }
-
-        .brand-text span {
-          font-size: 0.76rem;
-        }
-
-        .nav-links {
-          display: none;
-        }
-
-        .status-badge {
-          order: 3;
-          width: 100%;
-          justify-content: center;
-        }
-
-        .menu-toggle {
-          display: block;
-        }
-
-        .menu-toggle[open] {
-          width: 100%;
-        }
-
-        .section {
-          padding: 3.2rem 0;
-        }
-
-        .hero {
-          padding: 1rem 0 2.6rem;
-        }
-
-        .hero-copy,
-        .search-card,
-        .trust-card,
-        .step-card,
-        .contact-card {
-          padding: 1.2rem;
-        }
-
-        .hero-copy p,
-        .search-header p,
-        .section-head p,
-        .contact-card p {
-          font-size: 0.96rem;
-        }
-
-        .hero-actions,
-        .contact-actions {
-          flex-direction: column;
-          align-items: stretch;
-        }
-
-        .btn {
-          width: 100%;
-        }
-
-        .products-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .product-card {
-          grid-template-columns: 108px 1fr;
-          grid-template-rows: none;
-          align-items: stretch;
-        }
-
-        .hero-image img,
-        .contact-visual img {
-          min-height: 320px;
-        }
-
-        .product-card img {
-          height: 100%;
-          min-height: 100%;
-        }
-
-        .product-body {
-          padding: 0.9rem;
-          gap: 0.65rem;
-        }
-
-        .product-body p,
-        .tag-chip {
-          font-size: 0.78rem;
-        }
-
-        .results-meta {
-          font-size: 0.86rem;
-        }
-
-        .menu-panel .btn {
-          width: 100%;
-        }
-      }
-
-      @media (max-width: 520px) {
-        .container {
-          width: min(100% - 1rem, 1180px);
-        }
-
-        .topbar {
-          padding-top: 0.75rem;
-        }
-
-        .hero-image img,
-        .contact-visual img {
-          min-height: 260px;
-        }
-
-        .hero-badge {
-          left: 0.85rem;
-          right: 0.85rem;
-          bottom: 0.85rem;
-          max-width: none;
-        }
-
-        .search-input {
-          padding: 0.95rem 1rem;
-          font-size: 0.95rem;
-        }
-
-        .product-card {
-          grid-template-columns: 92px 1fr;
-        }
-
-        .product-body h3 {
-          font-size: 1rem;
-        }
-
-        .tag-chip {
-          padding: 0.3rem 0.55rem;
-        }
-      }
-
-      .topbar {
-        z-index: 24;
-      }
-
-      .nav,
-      .menu-panel,
-      .hero-copy,
-      .search-card,
-      .trust-card,
-      .step-card,
-      .contact-card {
-        border-color: rgba(15, 118, 110, 0.12);
-      }
-
-      .nav {
-        background: rgba(255, 255, 255, 0.84);
-      }
-
-      .brand-mark {
-        color: #ffffff;
-        background:
-          linear-gradient(145deg, rgba(255, 255, 255, 0.14), transparent),
-          linear-gradient(135deg, var(--green), var(--sage));
-        box-shadow: 0 16px 28px rgba(15, 118, 110, 0.22);
-      }
-
-      .hero-copy {
-        background:
-          linear-gradient(
-            160deg,
-            rgba(255, 255, 255, 0.98),
-            rgba(247, 251, 250, 0.95)
-          );
-      }
-
-      .btn-primary {
-        background: linear-gradient(135deg, var(--green), var(--sage));
-        color: #ffffff;
-      }
-
-      .btn-secondary {
-        color: var(--green-deep);
-      }
-
-      .hero-stats,
-      .catalog-legend,
-      .service-grid {
-        display: grid;
-        gap: 1rem;
-      }
-
-      .hero-stats {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        margin-top: 1.5rem;
-      }
-
-      .hero-stat {
-        padding: 0.95rem 1rem;
-        border-radius: 20px;
-        background: rgba(9, 35, 31, 0.94);
-        color: rgba(255, 255, 255, 0.78);
-      }
-
-      .hero-stat strong {
-        display: block;
-        margin-bottom: 0.2rem;
-        color: #ffffff;
-        font-size: 1.02rem;
-      }
-
-      .hero-badge {
-        background: rgba(255, 255, 255, 0.92);
-        border-color: rgba(15, 118, 110, 0.12);
-        max-width: 280px;
-      }
-
       .quick-searches {
         display: flex;
         flex-wrap: wrap;
@@ -1139,7 +876,9 @@
       }
 
       .catalog-legend {
+        display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1rem;
         margin-bottom: 1.6rem;
       }
 
@@ -1160,7 +899,9 @@
       }
 
       .service-grid {
+        display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.2rem;
       }
 
       .service-icon {
@@ -1170,30 +911,13 @@
         place-items: center;
         margin-bottom: 1rem;
         border-radius: 16px;
-        background: linear-gradient(135deg, rgba(212, 177, 106, 0.22), rgba(15, 118, 110, 0.16));
+        background: linear-gradient(
+          135deg,
+          rgba(212, 177, 106, 0.22),
+          rgba(15, 118, 110, 0.16)
+        );
         color: var(--green-deep);
         font-weight: 800;
-      }
-
-      .products-grid {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-      }
-
-      .product-body h3 {
-        font-size: 1rem;
-        line-height: 1.15;
-        margin-bottom: 0.2rem;
-      }
-
-      .product-body p {
-        font-size: 0.82rem;
-        line-height: 1.5;
-      }
-
-      .product-footer .btn {
-        padding: 0.8rem 0.95rem;
-        font-size: 0.8rem;
-        min-height: 42px;
       }
 
       .product-meta-row {
@@ -1248,7 +972,11 @@
       .product-advice {
         padding: 0.72rem;
         border-radius: 16px;
-        background: linear-gradient(180deg, var(--surface-soft), var(--surface-tint));
+        background: linear-gradient(
+          180deg,
+          var(--surface-soft),
+          var(--surface-tint)
+        );
         border: 1px solid rgba(15, 118, 110, 0.1);
       }
 
@@ -1288,6 +1016,10 @@
         .prescription-wrap {
           grid-template-columns: 1fr;
         }
+
+        .products-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
       }
 
       @media (max-width: 860px) {
@@ -1296,287 +1028,172 @@
           grid-template-columns: 1fr;
         }
 
-        .products-grid,
-        .hero-stats {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-
-        .product-card img {
-          height: 142px;
-        }
-
-        .product-body {
-          padding: 0.78rem;
-        }
-      }
-
-      @media (max-width: 760px) {
-        .hero-stats,
         .products-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-points {
+          grid-template-columns: 1fr;
+        }
+
+        .trust-grid,
+        .steps-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .contact-wrap {
           grid-template-columns: 1fr;
         }
       }
 
       @media (max-width: 760px) {
-        .container {
-          width: min(100% - 1.1rem, 1180px);
-        }
-
-        .section {
-          padding: 2.75rem 0;
+        .topbar {
+          position: static;
         }
 
         .nav {
-          padding: 0.8rem 0.9rem;
-          border-radius: 22px;
+          align-items: center;
+          flex-wrap: wrap;
+          border-radius: 24px;
+          padding: 0.9rem 1rem;
+        }
+
+        .brand {
+          flex: 1;
+          min-width: 0;
+        }
+
+        .brand-text strong {
+          font-size: 0.95rem;
+          line-height: 1.2;
+        }
+
+        .brand-text span {
+          font-size: 0.76rem;
+        }
+
+        .nav-links {
+          display: none;
+        }
+
+        .status-badge {
+          order: 3;
+          width: 100%;
+          justify-content: center;
+        }
+
+        .menu-toggle {
+          display: block;
+        }
+
+        .menu-toggle[open] {
+          width: 100%;
+        }
+
+        .section {
+          padding: 3.2rem 0;
+        }
+
+        .hero {
+          padding: 1rem 0 2.6rem;
         }
 
         .hero-copy,
         .search-card,
         .trust-card,
         .step-card,
-        .service-card,
-        .contact-card,
-        .prescription-card,
-        .prescription-info,
-        .legend-card {
-          padding: 1rem;
-          border-radius: 20px;
+        .contact-card {
+          padding: 1.2rem;
         }
 
         .hero-copy p,
-        .section-head p,
         .search-header p,
+        .section-head p,
         .contact-card p {
-          font-size: 0.93rem;
+          font-size: 0.96rem;
         }
 
-        .hero-stat,
-        .legend-card,
-        .service-card {
-          padding: 0.9rem;
+        .hero-actions,
+        .contact-actions {
+          flex-direction: column;
+          align-items: stretch;
         }
 
-        .quick-searches {
-          gap: 0.5rem;
+        .btn {
+          width: 100%;
         }
 
-        .search-chip {
-          padding: 0.58rem 0.85rem;
-          font-size: 0.76rem;
-        }
-
-        .results-meta {
-          gap: 0.45rem;
-          font-size: 0.82rem;
+        .hero-image img,
+        .contact-visual img {
+          min-height: 320px;
         }
 
         .product-card {
-          grid-template-columns: 74px 1fr;
-          border-radius: 18px;
+          grid-template-columns: 108px 1fr;
+          grid-template-rows: none;
+          align-items: stretch;
         }
 
         .product-card img {
-          width: 100%;
           height: 100%;
           min-height: 100%;
-          object-fit: cover;
         }
 
         .product-body {
-          gap: 0.48rem;
-          padding: 0.62rem;
-        }
-
-        .product-body h3 {
-          font-size: 0.86rem;
-          line-height: 1.15;
-          margin-bottom: 0.2rem;
-        }
-
-        .product-category,
-        .status-pill,
-        .tag-chip {
-          font-size: 0.62rem;
-        }
-
-        .status-pill,
-        .tag-chip {
-          padding: 0.22rem 0.42rem;
+          padding: 0.9rem;
+          gap: 0.65rem;
         }
 
         .product-body p,
-        .product-advice span,
-        .product-footnote {
-          font-size: 0.68rem;
-          line-height: 1.38;
+        .tag-chip {
+          font-size: 0.78rem;
         }
 
-        .product-advice {
-          padding: 0.56rem;
-          border-radius: 12px;
+        .results-meta {
+          font-size: 0.86rem;
         }
 
-        .product-advice strong {
-          font-size: 0.72rem;
-          margin-bottom: 0.15rem;
-        }
-
-        .product-footer {
-          gap: 0.48rem;
-        }
-
-        .product-footer .btn {
-          padding: 0.66rem 0.72rem;
-          font-size: 0.72rem;
-          min-height: 38px;
-        }
-
-        .hero-badge {
-          padding: 0.9rem 1rem;
-          border-radius: 18px;
-        }
-
-        .field input,
-        .field textarea {
-          padding: 0.85rem 0.9rem;
-          font-size: 0.9rem;
-        }
-
-        .contact-actions,
-        .hero-actions {
-          gap: 0.75rem;
+        .menu-panel .btn {
+          width: 100%;
         }
       }
 
       @media (max-width: 520px) {
         .container {
-          width: min(100% - 0.8rem, 1180px);
+          width: min(100% - 1rem, 1180px);
         }
 
         .topbar {
-          padding-top: 0.55rem;
-        }
-
-        .brand-mark {
-          width: 44px;
-          height: 44px;
-          border-radius: 14px;
-        }
-
-        .brand-text strong {
-          font-size: 0.88rem;
-        }
-
-        .brand-text span {
-          font-size: 0.72rem;
-        }
-
-        .hero {
-          padding: 0.75rem 0 2rem;
-        }
-
-        .hero-copy,
-        .search-card,
-        .trust-card,
-        .step-card,
-        .service-card,
-        .contact-card,
-        .prescription-card,
-        .prescription-info,
-        .legend-card {
-          padding: 0.9rem;
-          border-radius: 18px;
+          padding-top: 0.75rem;
         }
 
         .hero-image img,
         .contact-visual img {
-          min-height: 240px;
+          min-height: 260px;
         }
 
         .hero-badge {
-          left: 0.7rem;
-          right: 0.7rem;
-          bottom: 0.7rem;
-          padding: 0.8rem 0.9rem;
-        }
-
-        .hero-badge strong,
-        .hero-badge span,
-        .contact-lines,
-        .menu-contact span {
-          font-size: 0.82rem;
+          left: 0.85rem;
+          right: 0.85rem;
+          bottom: 0.85rem;
+          max-width: none;
         }
 
         .search-input {
-          padding: 0.88rem 0.92rem;
-          font-size: 0.92rem;
-        }
-
-        .field input,
-        .field textarea {
-          padding: 0.78rem 0.82rem;
-          font-size: 0.84rem;
-          border-radius: 14px;
-        }
-
-        .field label,
-        .form-note,
-        .form-status {
-          font-size: 0.74rem;
-        }
-
-        .search-chip {
-          padding: 0.5rem 0.72rem;
-          font-size: 0.72rem;
+          padding: 0.95rem 1rem;
+          font-size: 0.95rem;
         }
 
         .product-card {
-          grid-template-columns: 64px 1fr;
-          border-radius: 16px;
-        }
-
-        .product-body {
-          padding: 0.52rem;
-          gap: 0.42rem;
+          grid-template-columns: 92px 1fr;
         }
 
         .product-body h3 {
-          font-size: 0.8rem;
+          font-size: 1rem;
         }
 
-        .product-body p,
-        .product-advice span,
-        .product-footnote,
-        .results-meta {
-          font-size: 0.64rem;
-        }
-
-        .product-advice {
-          padding: 0.5rem;
-        }
-
-        .product-advice strong {
-          font-size: 0.68rem;
-        }
-
-        .status-pill,
         .tag-chip {
-          font-size: 0.58rem;
-          padding: 0.2rem 0.36rem;
-        }
-
-        .product-footer .btn {
-          padding: 0.58rem 0.66rem;
-          font-size: 0.66rem;
-          border-radius: 12px;
-          min-height: 34px;
-        }
-
-        .hero-actions .btn,
-        .contact-actions .btn,
-        .menu-panel .btn {
-          min-height: 44px;
+          padding: 0.3rem 0.55rem;
         }
       }
     </style>
@@ -1589,7 +1206,7 @@
             <span class="brand-mark">K</span>
             <span class="brand-text">
               <strong>Kennog Pharmacy</strong>
-              <span>Trusted care, verified stock, smart ordering in Isolo</span>
+              <span>Trusted care, verified stock, smart ordering in Lagos</span>
             </span>
           </a>
           <div class="nav-links">
@@ -1601,7 +1218,11 @@
             <a href="#how">How It Works</a>
             <a href="#contact">Contact</a>
           </div>
-          <div id="pharmacyStatus" class="status-badge" aria-live="polite"></div>
+          <div
+            id="pharmacyStatus"
+            class="status-badge"
+            aria-live="polite"
+          ></div>
           <details class="menu-toggle">
             <summary aria-label="Open menu">
               <span class="burger"></span>
@@ -1639,17 +1260,20 @@
         <div class="container hero-grid">
           <div class="hero-copy">
             <span class="eyebrow">Premium Community Pharmacy</span>
-            <h1>Kennog Pharmacy helps Lagos customers order with confidence.</h1>
+            <h1>
+              Kennog Pharmacy helps Lagos customers order with confidence.
+            </h1>
             <p>
-              Built for real pharmacy operations in Isolo, this experience
-              combines trusted product discovery, pharmacist-aware guidance, and
-              fast WhatsApp ordering that feels professional from first click to
+              Built for real pharmacy operations, this experience combines
+              trusted product discovery, pharmacist-aware guidance, and fast
+              WhatsApp ordering that feels professional from first click to
               confirmation.
             </p>
             <p>
-              Search by medicine name, illness, or symptom. Instantly see stock
-              cues, prescription flags, and pharmacist notes before you message
-              the store.
+              Search by medicine name (like Lonart for malaria or Benylin for
+              cough syrup), illness, or symptom. Instantly see stock cues,
+              prescription flags, and pharmacist notes before you message the
+              store.
             </p>
             <div class="hero-actions">
               <a
@@ -1661,36 +1285,27 @@
               >
               <a class="btn btn-secondary" href="#products">Browse Products</a>
             </div>
-            <div class="hero-stats">
-              <div class="hero-stat">
-                <strong>20+</strong>
-                <span>everyday pharmacy essentials in the catalog</span>
-              </div>
-              <div class="hero-stat">
-                <strong>Isolo</strong>
-                <span>local support from a Lagos neighborhood pharmacy</span>
-              </div>
-              <div class="hero-stat">
-                <strong>Rx Ready</strong>
-                <span>prescription-required items are clearly marked</span>
-              </div>
-              <div class="hero-stat">
-                <strong>Smart Search</strong>
-                <span>search by malaria, pain, cough, fever, and more</span>
-              </div>
-            </div>
             <div class="hero-points">
               <div class="hero-point">
-                <strong>Verified stock cues</strong>
-                <span>Customers can see in-stock and low-stock products before they enquire.</span>
+                <strong>Search by specific medicine names</strong>
+                <span
+                  >Type "Lonart" for malaria or "Benylin" for cough syrup —
+                  results appear with images and details.</span
+                >
               </div>
               <div class="hero-point">
-                <strong>Pharmacist-aware guidance</strong>
-                <span>Advice blocks and prescription tags build trust and reduce confusion.</span>
+                <strong>Wider reach across Lagos</strong>
+                <span
+                  >Kennog Pharmacy now serves customers beyond Isolo with fast
+                  WhatsApp ordering and delivery support.</span
+                >
               </div>
               <div class="hero-point">
-                <strong>WhatsApp-first ordering</strong>
-                <span>Every product opens a tailored message for faster business conversations.</span>
+                <strong>Product images displayed</strong>
+                <span
+                  >Every medicine shows a clear image to help customers identify
+                  what they're ordering.</span
+                >
               </div>
             </div>
           </div>
@@ -1702,8 +1317,11 @@
                 alt="Premium pharmacy shelves"
               />
               <div class="hero-badge">
-                <strong>Kennog Pharmacy, Isolo Lagos</strong>
-                <span>8 Okeho Street, Ire-Akari Estate Rd, with quick order support on WhatsApp.</span>
+                <strong>Kennog Pharmacy, Lagos</strong>
+                <span
+                  >8 Okeho Street, Ire-Akari Estate Rd, with quick order support
+                  on WhatsApp and wider delivery across Lagos.</span
+                >
               </div>
             </div>
           </div>
@@ -1718,9 +1336,9 @@
                 <span class="eyebrow">Medication Finder</span>
                 <h2>Search like a customer actually thinks</h2>
                 <p>
-                  Search by medicine name, illness, or symptom. Try queries like
-                  malaria, pain, infection, stomach upset, catarrh, or
-                  Paracetamol.
+                  Search by medicine name (Lonart, Benylin, Paracetamol),
+                  illness, or symptom. Try queries like malaria, pain,
+                  infection, stomach upset, catarrh, or specific brand names.
                 </p>
               </div>
             </div>
@@ -1728,14 +1346,14 @@
               id="searchInput"
               class="search-input"
               type="text"
-              placeholder="Search medicines or what you're treating (e.g. malaria, pain, cough, Paracetamol)"
+              placeholder="Search by medicine name (e.g. Lonart, Benylin, Paracetamol) or illness (e.g. malaria, pain, cough)"
             />
             <div id="quickSearches" class="quick-searches"></div>
             <div class="results-meta">
               <span id="resultsCount">Showing featured products</span>
               <span id="resultsHint"
-                >Search works with medicine names, illness types, and
-                symptoms</span
+                >Search works with medicine names, brand names, illness types,
+                and symptoms</span
               >
             </div>
             <div id="queryAssist" class="advisory-panel">
@@ -1761,25 +1379,37 @@
           <div class="catalog-legend">
             <div class="legend-card">
               <strong>In Stock / Low Stock</strong>
-              <p>Customers see availability cues immediately before ordering.</p>
+              <p>
+                Customers see availability cues immediately before ordering.
+              </p>
             </div>
             <div class="legend-card">
               <strong>Requires Prescription</strong>
-              <p>Higher-risk medicines are clearly flagged for professional handling.</p>
+              <p>
+                Higher-risk medicines are clearly flagged for professional
+                handling.
+              </p>
             </div>
             <div class="legend-card">
               <strong>Pharmacist Advice</strong>
-              <p>Every listing carries useful context that feels credible and practical.</p>
+              <p>
+                Every listing carries useful context that feels credible and
+                practical.
+              </p>
             </div>
             <div class="legend-card">
               <strong>WhatsApp Ready</strong>
-              <p>The order button opens with the product name and context already included.</p>
+              <p>
+                The order button opens with the product name and context already
+                included.
+              </p>
             </div>
           </div>
           <div id="productsGrid" class="products-grid"></div>
           <div id="emptyState" class="empty-state">
-            No matching product found. Try another medicine, illness, or symptom
-            like malaria, pain, infection, cough, stomach upset, or fever.
+            No matching product found. Try another medicine name (Lonart,
+            Benylin), illness, or symptom like malaria, pain, infection, cough,
+            stomach upset, or fever.
           </div>
         </div>
       </section>
@@ -1802,7 +1432,7 @@
                   <input
                     id="drugName"
                     type="text"
-                    placeholder="Example: Amoxicillin 500mg or malaria drugs"
+                    placeholder="Example: Lonart, Benylin, Amoxicillin 500mg"
                   />
                 </div>
                 <div class="field">
@@ -1819,7 +1449,11 @@
                   sending.
                 </div>
                 <div id="formStatus" class="form-status"></div>
-                <button id="sendPrescription" class="btn btn-primary" type="submit">
+                <button
+                  id="sendPrescription"
+                  class="btn btn-primary"
+                  type="submit"
+                >
                   Send Your Message
                 </button>
               </form>
@@ -1835,15 +1469,24 @@
               <div class="prescription-points">
                 <div class="prescription-point">
                   <strong>1. Add the request</strong>
-                  <span>Enter the drug name or leave a short note for the pharmacist.</span>
+                  <span
+                    >Enter the drug name or leave a short note for the
+                    pharmacist.</span
+                  >
                 </div>
                 <div class="prescription-point">
                   <strong>2. Attach the prescription</strong>
-                  <span>When WhatsApp opens, use the attachment icon to add the prescription image or file.</span>
+                  <span
+                    >When WhatsApp opens, use the attachment icon to add the
+                    prescription image or file.</span
+                  >
                 </div>
                 <div class="prescription-point">
                   <strong>3. Continue to WhatsApp</strong>
-                  <span>Your message opens directly in Kennog Pharmacy's WhatsApp chat, ready to send.</span>
+                  <span
+                    >Your message opens directly in Kennog Pharmacy's WhatsApp
+                    chat, ready to send.</span
+                  >
                 </div>
               </div>
             </div>
@@ -1855,7 +1498,9 @@
         <div class="container">
           <div class="section-head">
             <span class="eyebrow">Why Customers Trust Us</span>
-            <h2>Structured like a real pharmacy, not a generic online catalog</h2>
+            <h2>
+              Structured like a real pharmacy, not a generic online catalog
+            </h2>
             <p>
               Kennog Pharmacy is presented to feel dependable, compliant, and
               helpful at every step of the journey.
@@ -1894,7 +1539,9 @@
         <div class="container">
           <div class="section-head">
             <span class="eyebrow">Service Experience</span>
-            <h2>Features that make this feel ready for a serious pharmacy business</h2>
+            <h2>
+              Features that make this feel ready for a serious pharmacy business
+            </h2>
             <p>
               The page now communicates both customer convenience and owner-side
               control, which is what moves this from "nice demo" to "usable
@@ -1912,10 +1559,11 @@
             </div>
             <div class="service-card">
               <div class="service-icon">IQ</div>
-              <strong>Search by illness intelligence</strong>
+              <strong>Search by medicine name or illness</strong>
               <p>
-                Queries like malaria, pain, diarrhea, allergy, and stomach upset
-                surface the most relevant medicines first.
+                Queries like Lonart (malaria), Benylin (cough), malaria, pain,
+                diarrhea, allergy, and stomach upset surface the most relevant
+                medicines first.
               </p>
             </div>
             <div class="service-card">
@@ -1939,18 +1587,18 @@
           <div class="steps-grid">
             <div class="step-card">
               <div class="step-number">1</div>
-              <strong>Search by medicine or illness</strong>
+              <strong>Search by medicine name or illness</strong>
               <p>
-                Type a name like Ibuprofen or a condition like malaria, cough,
-                infection, or stomach pain.
+                Type a specific name like Lonart, Benylin, Paracetamol, or a
+                condition like malaria, cough, infection, or stomach pain.
               </p>
             </div>
             <div class="step-card">
               <div class="step-number">2</div>
               <strong>Review the product context</strong>
               <p>
-                Check the stock badge, prescription status, and pharmacist
-                advice before you place the enquiry.
+                Check the product image, stock badge, prescription status, and
+                pharmacist advice before you place the enquiry.
               </p>
             </div>
             <div class="step-card">
@@ -1973,7 +1621,7 @@
             <p>
               Reach Kennog Pharmacy directly for stock confirmation,
               prescription handling, order support, and fast local response in
-              Isolo, Lagos.
+              Lagos.
             </p>
             <div class="contact-actions">
               <a
@@ -2016,48 +1664,45 @@
 
     <footer>
       <div class="container">
-        <p>
-          &copy; 2026 Kennog Pharmacy. All rights reserved.
-        </p>
+        <p>&copy; 2026 Kennog Pharmacy. All rights reserved.</p>
       </div>
     </footer>
 
     <script>
+      // Expanded product list with specific brand names like Lonart and Benylin
       const products = [
+        {
+          name: "Lonart (Artemether Lumefantrine)",
+          image:
+            "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&w=900&q=80",
+          description:
+            "A trusted antimalarial medication specifically for malaria treatment. Search by 'Lonart' or 'malaria'.",
+          tags: ["lonart", "malaria", "fever", "body weakness", "antimalarial"],
+          featured: true,
+        },
+        {
+          name: "Benylin Cough Syrup",
+          image:
+            "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?auto=format&fit=crop&w=900&q=80",
+          description:
+            "Reliable cough relief for dry and chesty coughs. Search by 'Benylin' or 'cough'.",
+          tags: [
+            "benylin",
+            "cough",
+            "cold",
+            "throat",
+            "catarrh",
+            "cough syrup",
+          ],
+          featured: true,
+        },
         {
           name: "Paracetamol",
           image:
             "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=900&q=80",
           description:
             "A trusted pain and fever relief medicine commonly used for headaches, body pain, and mild fever.",
-          tags: ["headache", "pain", "fever", "body pain"],
-          featured: true,
-        },
-        {
-          name: "Artemether Lumefantrine",
-          image:
-            "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&w=900&q=80",
-          description:
-            "A common antimalarial treatment often used when managing malaria symptoms and recurring fever.",
-          tags: ["malaria", "fever", "body weakness"],
-          featured: true,
-        },
-        {
-          name: "Cough Syrup",
-          image:
-            "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?auto=format&fit=crop&w=900&q=80",
-          description:
-            "Helpful relief for cough, throat irritation, and common cold discomfort.",
-          tags: ["cough", "cold", "throat", "catarrh"],
-          featured: true,
-        },
-        {
-          name: "Vitamin C",
-          image:
-            "https://images.unsplash.com/photo-1615486511484-92e172cc4fe0?auto=format&fit=crop&w=900&q=80",
-          description:
-            "Daily immune support and wellness supplement for general health and recovery.",
-          tags: ["immunity", "vitamin", "wellness", "recovery"],
+          tags: ["paracetamol", "headache", "pain", "fever", "body pain"],
           featured: true,
         },
         {
@@ -2066,7 +1711,7 @@
             "https://images.unsplash.com/photo-1628771065518-0d82f1938462?auto=format&fit=crop&w=900&q=80",
           description:
             "A widely used antibiotic available with proper pharmacy guidance and treatment advice.",
-          tags: ["infection", "antibiotic", "bacteria", "fever"],
+          tags: ["amoxicillin", "infection", "antibiotic", "bacteria", "fever"],
         },
         {
           name: "ORS Sachets",
@@ -2074,7 +1719,7 @@
             "https://images.unsplash.com/photo-1579165466741-7f35e4755660?auto=format&fit=crop&w=900&q=80",
           description:
             "Oral rehydration support for dehydration, diarrhea, and fluid replacement needs.",
-          tags: ["dehydration", "diarrhea", "stomach", "weakness"],
+          tags: ["ors", "dehydration", "diarrhea", "stomach", "weakness"],
         },
         {
           name: "Antacid Tablets",
@@ -2082,15 +1727,80 @@
             "https://images.unsplash.com/photo-1584362917165-526a968579e8?auto=format&fit=crop&w=900&q=80",
           description:
             "Quick relief for heartburn, indigestion, and stomach discomfort after meals.",
-          tags: ["ulcer", "heartburn", "indigestion", "stomach pain"],
+          tags: [
+            "antacid",
+            "ulcer",
+            "heartburn",
+            "indigestion",
+            "stomach pain",
+          ],
         },
         {
-          name: "Allergy Relief",
+          name: "Vitamin C",
+          image:
+            "https://images.unsplash.com/photo-1615486511484-92e172cc4fe0?auto=format&fit=crop&w=900&q=80",
+          description:
+            "Daily immune support and wellness supplement for general health and recovery.",
+          tags: ["vitamin c", "immunity", "vitamin", "wellness", "recovery"],
+          featured: true,
+        },
+        {
+          name: "Ibuprofen",
+          image:
+            "https://images.unsplash.com/photo-1580281658629-33c43f5f1f3b?auto=format&fit=crop&w=900&q=80",
+          description:
+            "Pain and inflammation relief for headaches, menstrual pain, and muscle discomfort.",
+          tags: [
+            "ibuprofen",
+            "pain",
+            "headache",
+            "inflammation",
+            "menstrual pain",
+          ],
+        },
+        {
+          name: "Flagyl (Metronidazole)",
+          image:
+            "https://images.unsplash.com/photo-1585435557343-3b092031a831?auto=format&fit=crop&w=900&q=80",
+          description:
+            "Commonly requested support for stomach infections, diarrhea, and related discomfort.",
+          tags: [
+            "flagyl",
+            "metronidazole",
+            "diarrhea",
+            "stomach infection",
+            "infection",
+          ],
+        },
+        {
+          name: "Cetirizine",
           image:
             "https://images.unsplash.com/photo-1628771065518-0d82f1938462?auto=format&fit=crop&w=900&q=80",
           description:
-            "Support for sneezing, itching, and mild allergic reactions caused by dust or seasonal triggers.",
-          tags: ["allergy", "itching", "sneezing", "catarrh"],
+            "Daily allergy support for itching, catarrh, watery eyes, and skin irritation.",
+          tags: ["cetirizine", "allergy", "catarrh", "itching", "watery eyes"],
+        },
+        {
+          name: "Salbutamol Inhaler",
+          image:
+            "https://images.unsplash.com/photo-1576602976047-174e57a47881?auto=format&fit=crop&w=900&q=80",
+          description:
+            "Quick breathing support often used for asthma symptoms and chest tightness.",
+          tags: [
+            "salbutamol",
+            "asthma",
+            "breathing",
+            "chest tightness",
+            "wheezing",
+          ],
+        },
+        {
+          name: "Diclofenac",
+          image:
+            "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&w=900&q=80",
+          description:
+            "Pain relief often used for joint discomfort, swelling, and muscle aches.",
+          tags: ["diclofenac", "pain", "joint pain", "swelling", "back pain"],
         },
         {
           name: "Blood Tonic",
@@ -2101,60 +1811,12 @@
           tags: ["blood tonic", "weakness", "energy", "fatigue"],
         },
         {
-          name: "Ibuprofen",
-          image:
-            "https://images.unsplash.com/photo-1580281658629-33c43f5f1f3b?auto=format&fit=crop&w=900&q=80",
-          description:
-            "Pain and inflammation relief for headaches, menstrual pain, and muscle discomfort.",
-          tags: ["pain", "headache", "inflammation", "menstrual pain"],
-        },
-        {
-          name: "Flagyl",
-          image:
-            "https://images.unsplash.com/photo-1585435557343-3b092031a831?auto=format&fit=crop&w=900&q=80",
-          description:
-            "Commonly requested support for stomach infections, diarrhea, and related discomfort.",
-          tags: ["diarrhea", "stomach infection", "toilet", "infection"],
-        },
-        {
-          name: "Diclofenac",
-          image:
-            "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&w=900&q=80",
-          description:
-            "Pain relief often used for joint discomfort, swelling, and muscle aches.",
-          tags: ["pain", "joint pain", "swelling", "back pain"],
-        },
-        {
-          name: "Loratadine",
-          image:
-            "https://images.unsplash.com/photo-1612531386530-97286d97c2d2?auto=format&fit=crop&w=900&q=80",
-          description:
-            "Allergy relief for sneezing, itching, runny nose, and other mild reactions.",
-          tags: ["allergy", "runny nose", "itching", "sneezing"],
-        },
-        {
-          name: "Salbutamol Inhaler",
-          image:
-            "https://images.unsplash.com/photo-1576602976047-174e57a47881?auto=format&fit=crop&w=900&q=80",
-          description:
-            "Quick breathing support often used for asthma symptoms and chest tightness.",
-          tags: ["asthma", "breathing", "chest tightness", "wheezing"],
-        },
-        {
-          name: "Cetirizine",
-          image:
-            "https://images.unsplash.com/photo-1628771065518-0d82f1938462?auto=format&fit=crop&w=900&q=80",
-          description:
-            "Daily allergy support for itching, catarrh, watery eyes, and skin irritation.",
-          tags: ["allergy", "catarrh", "itching", "watery eyes"],
-        },
-        {
           name: "Zinc Tablets",
           image:
             "https://images.unsplash.com/photo-1615486363973-f79d875780fa?auto=format&fit=crop&w=900&q=80",
           description:
             "Nutritional support commonly used for immunity, recovery, and general wellness.",
-          tags: ["immunity", "supplement", "recovery", "wellness"],
+          tags: ["zinc", "immunity", "supplement", "recovery", "wellness"],
         },
         {
           name: "Pregnancy Test Kit",
@@ -2162,7 +1824,13 @@
             "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=900&q=80",
           description:
             "Simple home test kit for early pregnancy checks and quick confirmation.",
-          tags: ["pregnancy", "missed period", "test kit", "women health"],
+          tags: [
+            "pregnancy test",
+            "pregnancy",
+            "missed period",
+            "test kit",
+            "women health",
+          ],
         },
         {
           name: "Flu Relief Capsules",
@@ -2178,7 +1846,13 @@
             "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=900&q=80",
           description:
             "Useful antiseptic support for minor wound cleaning and first aid needs.",
-          tags: ["wound", "antiseptic", "injury", "first aid"],
+          tags: [
+            "hydrogen peroxide",
+            "wound",
+            "antiseptic",
+            "injury",
+            "first aid",
+          ],
         },
         {
           name: "Gentamicin Cream",
@@ -2186,7 +1860,7 @@
             "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?auto=format&fit=crop&w=900&q=80",
           description:
             "Topical support commonly used for minor skin infections and irritation.",
-          tags: ["skin infection", "rash", "cream", "wound"],
+          tags: ["gentamicin", "skin infection", "rash", "cream", "wound"],
         },
         {
           name: "Buscopan",
@@ -2194,7 +1868,13 @@
             "https://images.unsplash.com/photo-1580281658629-33c43f5f1f3b?auto=format&fit=crop&w=900&q=80",
           description:
             "Common relief for stomach cramps, abdominal discomfort, and period pain.",
-          tags: ["stomach pain", "cramps", "abdominal pain", "period pain"],
+          tags: [
+            "buscopan",
+            "stomach pain",
+            "cramps",
+            "abdominal pain",
+            "period pain",
+          ],
         },
         {
           name: "Eye Drops",
@@ -2202,7 +1882,13 @@
             "https://images.unsplash.com/photo-1584362917165-526a968579e8?auto=format&fit=crop&w=900&q=80",
           description:
             "Helpful support for dry eyes, redness, and mild eye irritation.",
-          tags: ["eye pain", "red eyes", "dry eyes", "eye irritation"],
+          tags: [
+            "eye drops",
+            "eye pain",
+            "red eyes",
+            "dry eyes",
+            "eye irritation",
+          ],
         },
         {
           name: "Glucose D",
@@ -2210,33 +1896,12 @@
             "https://images.unsplash.com/photo-1512069772995-ec65ed45afd6?auto=format&fit=crop&w=900&q=80",
           description:
             "Quick energy support for weakness, low strength, and general recovery.",
-          tags: ["weakness", "energy", "fatigue", "recovery"],
+          tags: ["glucose", "weakness", "energy", "fatigue", "recovery"],
         },
-      ];
-
-      const businessName = "Kennog Pharmacy";
-      const whatsappNumber = "2348063689039";
-      const quickSearchKeywords = [
-        "malaria",
-        "pain",
-        "cough",
-        "infection",
-        "allergy",
-        "stomach upset",
-        "diarrhea",
-        "catarrh",
       ];
 
       const productDetails = {
-        Paracetamol: {
-          illnesses: ["pain", "headache", "fever"],
-          category: "Pain Relief",
-          stock: "In Stock",
-          prescription: false,
-          advice:
-            "Suitable for common pain and fever relief. Follow label instructions and ask the pharmacist if symptoms persist.",
-        },
-        "Artemether Lumefantrine": {
+        "Lonart (Artemether Lumefantrine)": {
           illnesses: ["malaria", "fever", "body weakness"],
           category: "Antimalarial",
           stock: "In Stock",
@@ -2244,7 +1909,7 @@
           advice:
             "Best used after pharmacist review, especially when fever is recurring or symptoms are severe.",
         },
-        "Cough Syrup": {
+        "Benylin Cough Syrup": {
           illnesses: ["cough", "cold", "catarrh", "throat irritation"],
           category: "Respiratory Relief",
           stock: "In Stock",
@@ -2252,13 +1917,13 @@
           advice:
             "Useful for everyday cough symptoms. Ask the pharmacist if cough lasts beyond a few days.",
         },
-        "Vitamin C": {
-          illnesses: ["immunity", "recovery", "wellness"],
-          category: "Supplements",
+        Paracetamol: {
+          illnesses: ["pain", "headache", "fever"],
+          category: "Pain Relief",
           stock: "In Stock",
           prescription: false,
           advice:
-            "A common supplement for general wellness support and recovery routines.",
+            "Suitable for common pain and fever relief. Follow label instructions and ask the pharmacist if symptoms persist.",
         },
         Amoxicillin: {
           illnesses: ["infection", "bacterial infection", "fever"],
@@ -2277,28 +1942,25 @@
             "A useful first-line support for fluid replacement. Contact the pharmacist if dehydration appears serious.",
         },
         "Antacid Tablets": {
-          illnesses: ["heartburn", "indigestion", "stomach upset", "stomach pain"],
+          illnesses: [
+            "heartburn",
+            "indigestion",
+            "stomach upset",
+            "stomach pain",
+          ],
           category: "Digestive Relief",
           stock: "In Stock",
           prescription: false,
           advice:
             "Helpful for common indigestion complaints. Ask for guidance if symptoms are frequent or severe.",
         },
-        "Allergy Relief": {
-          illnesses: ["allergy", "catarrh", "itching", "sneezing"],
-          category: "Allergy Care",
+        "Vitamin C": {
+          illnesses: ["immunity", "recovery", "wellness"],
+          category: "Supplements",
           stock: "In Stock",
           prescription: false,
           advice:
-            "Useful for mild allergy symptoms. Speak with the pharmacist if reactions are persistent or worsening.",
-        },
-        "Blood Tonic": {
-          illnesses: ["weakness", "fatigue", "energy support"],
-          category: "Wellness Tonics",
-          stock: "Low Stock",
-          prescription: false,
-          advice:
-            "Often requested for general wellness support. Pharmacist advice is useful where fatigue is persistent.",
+            "A common supplement for general wellness support and recovery routines.",
         },
         Ibuprofen: {
           illnesses: ["pain", "headache", "inflammation", "period pain"],
@@ -2308,13 +1970,39 @@
           advice:
             "Commonly used for pain and inflammation. Ask the pharmacist if you have ulcer concerns or special conditions.",
         },
-        Flagyl: {
-          illnesses: ["diarrhea", "infection", "stomach upset", "stomach infection"],
+        "Flagyl (Metronidazole)": {
+          illnesses: [
+            "diarrhea",
+            "infection",
+            "stomach upset",
+            "stomach infection",
+          ],
           category: "Digestive Care",
           stock: "Low Stock",
           prescription: true,
           advice:
             "Requires pharmacist guidance, especially when stomach symptoms are severe or recurring.",
+        },
+        Cetirizine: {
+          illnesses: ["allergy", "catarrh", "itching", "watery eyes"],
+          category: "Allergy Care",
+          stock: "In Stock",
+          prescription: false,
+          advice:
+            "Suitable for everyday allergy symptoms. The pharmacist can guide on the best option for your case.",
+        },
+        "Salbutamol Inhaler": {
+          illnesses: [
+            "asthma",
+            "breathing support",
+            "wheezing",
+            "chest tightness",
+          ],
+          category: "Respiratory Care",
+          stock: "In Stock",
+          prescription: true,
+          advice:
+            "Requires pharmacist or clinician guidance, especially for first-time users or worsening symptoms.",
         },
         Diclofenac: {
           illnesses: ["pain", "joint pain", "swelling", "back pain"],
@@ -2324,29 +2012,13 @@
           advice:
             "Better handled with pharmacist review where swelling, joint issues, or prolonged pain is involved.",
         },
-        Loratadine: {
-          illnesses: ["allergy", "runny nose", "itching", "catarrh"],
-          category: "Allergy Care",
-          stock: "In Stock",
+        "Blood Tonic": {
+          illnesses: ["weakness", "fatigue", "energy support"],
+          category: "Wellness Tonics",
+          stock: "Low Stock",
           prescription: false,
           advice:
-            "A go-to option for common allergy symptoms. Contact the pharmacist for use guidance if needed.",
-        },
-        "Salbutamol Inhaler": {
-          illnesses: ["asthma", "breathing support", "wheezing", "chest tightness"],
-          category: "Respiratory Care",
-          stock: "In Stock",
-          prescription: true,
-          advice:
-            "Requires pharmacist or clinician guidance, especially for first-time users or worsening symptoms.",
-        },
-        Cetirizine: {
-          illnesses: ["allergy", "catarrh", "itching", "watery eyes"],
-          category: "Allergy Care",
-          stock: "In Stock",
-          prescription: false,
-          advice:
-            "Suitable for everyday allergy symptoms. The pharmacist can guide on the best option for your case.",
+            "Often requested for general wellness support. Pharmacist advice is useful where fatigue is persistent.",
         },
         "Zinc Tablets": {
           illnesses: ["immunity", "recovery", "wellness"],
@@ -2389,7 +2061,12 @@
             "Needs pharmacist guidance to confirm the condition is suitable for topical treatment.",
         },
         Buscopan: {
-          illnesses: ["stomach pain", "cramps", "period pain", "abdominal pain"],
+          illnesses: [
+            "stomach pain",
+            "cramps",
+            "period pain",
+            "abdominal pain",
+          ],
           category: "Digestive Relief",
           stock: "In Stock",
           prescription: false,
@@ -2414,60 +2091,53 @@
         },
       };
 
+      const businessName = "Kennog Pharmacy";
+      const whatsappNumber = "2348063689039";
+      const quickSearchKeywords = [
+        "Lonart",
+        "Benylin",
+        "malaria",
+        "pain",
+        "cough",
+        "infection",
+        "allergy",
+        "stomach upset",
+        "diarrhea",
+        "catarrh",
+        "Paracetamol",
+      ];
+
       const conditionMap = {
-        malaria: ["Artemether Lumefantrine"],
-        fever: ["Paracetamol", "Artemether Lumefantrine", "Flu Relief Capsules"],
+        lonart: ["Lonart (Artemether Lumefantrine)"],
+        benylin: ["Benylin Cough Syrup"],
+        malaria: ["Lonart (Artemether Lumefantrine)"],
+        cough: ["Benylin Cough Syrup", "Cough Syrup", "Flu Relief Capsules"],
+        fever: [
+          "Paracetamol",
+          "Lonart (Artemether Lumefantrine)",
+          "Flu Relief Capsules",
+        ],
         pain: ["Paracetamol", "Ibuprofen", "Diclofenac", "Buscopan"],
         headache: ["Paracetamol", "Ibuprofen"],
-        cough: ["Cough Syrup", "Flu Relief Capsules"],
-        infection: ["Amoxicillin", "Flagyl", "Gentamicin Cream"],
-        allergy: ["Allergy Relief", "Cetirizine", "Loratadine"],
-        diarrhea: ["ORS Sachets", "Flagyl"],
-        "stomach upset": ["Antacid Tablets", "Buscopan", "ORS Sachets", "Flagyl"],
-        catarrh: ["Cough Syrup", "Flu Relief Capsules", "Cetirizine", "Allergy Relief"],
+        infection: [
+          "Amoxicillin",
+          "Flagyl (Metronidazole)",
+          "Gentamicin Cream",
+        ],
+        allergy: ["Cetirizine", "Allergy Relief"],
+        diarrhea: ["ORS Sachets", "Flagyl (Metronidazole)"],
+        "stomach upset": [
+          "Antacid Tablets",
+          "Buscopan",
+          "ORS Sachets",
+          "Flagyl (Metronidazole)",
+        ],
+        catarrh: ["Benylin Cough Syrup", "Flu Relief Capsules", "Cetirizine"],
         asthma: ["Salbutamol Inhaler"],
         wound: ["Hydrogen Peroxide", "Gentamicin Cream"],
         weakness: ["Blood Tonic", "Glucose D", "Vitamin C", "Zinc Tablets"],
         pregnancy: ["Pregnancy Test Kit"],
       };
-
-      const searchAliases = {
-        cold: ["catarrh", "cough", "flu"],
-        flu: ["catarrh", "fever", "body pain"],
-        ulcer: ["heartburn", "stomach upset"],
-        "body pain": ["pain"],
-        menstrual: ["period pain", "pain"],
-        "runny nose": ["allergy", "catarrh"],
-        tiredness: ["weakness", "fatigue"],
-      };
-
-      const guidanceMap = {
-        malaria:
-          "Malaria-related results are prioritized first. Severe or recurring fever should be reviewed by the pharmacist before treatment.",
-        infection:
-          "Infection-related products may require professional guidance. Prescription items are clearly labeled before you order.",
-        pregnancy:
-          "For pregnancy-related enquiries, the pharmacist can guide you on appropriate next steps and available products.",
-        asthma:
-          "Breathing-related medicines should be handled carefully. Speak with the pharmacist before ordering if symptoms are active.",
-        diarrhea:
-          "Hydration support is usually important with diarrhea. Speak with the pharmacist if symptoms are prolonged or severe.",
-      };
-
-      const productsGrid = document.getElementById("productsGrid");
-      const searchInput = document.getElementById("searchInput");
-      const resultsCount = document.getElementById("resultsCount");
-      const resultsHint = document.getElementById("resultsHint");
-      const emptyState = document.getElementById("emptyState");
-      const menuToggle = document.querySelector(".menu-toggle");
-      const quickSearches = document.getElementById("quickSearches");
-      const queryAssist = document.getElementById("queryAssist");
-      const queryAssistText = document.getElementById("queryAssistText");
-      const pharmacyStatus = document.getElementById("pharmacyStatus");
-      const prescriptionForm = document.getElementById("prescriptionForm");
-      const drugNameInput = document.getElementById("drugName");
-      const customerMessageInput = document.getElementById("customerMessage");
-      const formStatus = document.getElementById("formStatus");
 
       products.forEach((product) => {
         Object.assign(product, productDetails[product.name] || {});
@@ -2479,35 +2149,16 @@
         return value.trim().toLowerCase();
       }
 
-      function expandQuery(query) {
-        const raw = normalize(query);
-        const terms = new Set(raw.split(/\s+/).filter(Boolean));
-
-        Object.entries(searchAliases).forEach(([alias, mappedTerms]) => {
-          if (raw.includes(alias)) {
-            terms.add(alias);
-            mappedTerms.forEach((term) => terms.add(term));
-          }
-        });
-
-        Object.keys(conditionMap).forEach((condition) => {
-          if (raw.includes(condition)) {
-            terms.add(condition);
-          }
-        });
-
-        return Array.from(terms);
-      }
-
       function getPriorityProducts(query) {
         const raw = normalize(query);
-        const matchedConditions = Object.keys(conditionMap).filter((condition) =>
-          raw.includes(condition),
+        const matchedConditions = Object.keys(conditionMap).filter(
+          (condition) => raw.includes(condition),
         );
         const prioritySet = new Set(
-          matchedConditions.flatMap((condition) => conditionMap[condition] || []),
+          matchedConditions.flatMap(
+            (condition) => conditionMap[condition] || [],
+          ),
         );
-
         return { matchedConditions, prioritySet };
       }
 
@@ -2518,22 +2169,23 @@
           ? "I understand this item requires pharmacist review."
           : "Please confirm availability and next steps.";
         const fullMessage = `${intro} ${stockLine} ${rxLine}`;
-
         return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(fullMessage)}`;
       }
 
       function renderQuickSearches() {
-        quickSearches.innerHTML = quickSearchKeywords
+        const quickContainer = document.getElementById("quickSearches");
+        if (!quickContainer) return;
+        quickContainer.innerHTML = quickSearchKeywords
           .map(
             (keyword) =>
               `<button class="search-chip" type="button" data-query="${keyword}">${keyword}</button>`,
           )
           .join("");
-
-        quickSearches.querySelectorAll("[data-query]").forEach((button) => {
+        quickContainer.querySelectorAll("[data-query]").forEach((button) => {
           button.addEventListener("click", () => {
             const query = button.dataset.query || "";
-            searchInput.value = query;
+            const searchInput = document.getElementById("searchInput");
+            if (searchInput) searchInput.value = query;
             filterProducts(query);
           });
         });
@@ -2543,42 +2195,50 @@
         return stock === "Low Stock" ? "low-stock" : "in-stock";
       }
 
-      function updateAssistPanel(query, matchedConditions, hasPrescriptionResult) {
-        const firstGuidance = matchedConditions.find((condition) => guidanceMap[condition]);
-
+      function updateAssistPanel(
+        query,
+        matchedConditions,
+        hasPrescriptionResult,
+      ) {
+        const queryAssist = document.getElementById("queryAssist");
+        const queryAssistText = document.getElementById("queryAssistText");
+        if (!queryAssist || !queryAssistText) return;
+        const firstGuidance = matchedConditions.find((condition) =>
+          ["malaria", "infection", "pregnancy", "asthma", "diarrhea"].includes(
+            condition,
+          ),
+        );
         if (firstGuidance) {
           queryAssist.style.display = "block";
-          queryAssistText.textContent = guidanceMap[firstGuidance];
+          const guidanceMap = {
+            malaria:
+              "Malaria-related results (like Lonart) are prioritized. Severe or recurring fever should be reviewed by the pharmacist.",
+            infection:
+              "Infection-related products may require professional guidance. Prescription items are clearly labeled.",
+            pregnancy:
+              "For pregnancy-related enquiries, the pharmacist can guide you on appropriate next steps.",
+            asthma:
+              "Breathing-related medicines should be handled carefully. Speak with the pharmacist before ordering.",
+            diarrhea:
+              "Hydration support is usually important with diarrhea. Speak with the pharmacist if symptoms are prolonged.",
+          };
+          queryAssistText.textContent =
+            guidanceMap[firstGuidance] ||
+            "Pharmacist guidance recommended for this condition.";
           return;
         }
-
         if (query && hasPrescriptionResult) {
           queryAssist.style.display = "block";
           queryAssistText.textContent =
             "Some matching products require prescription or pharmacist review. Use the product details to choose carefully before ordering.";
           return;
         }
-
         queryAssist.style.display = "none";
-        queryAssistText.textContent = "";
-      }
-
-      function setFormStatus(message) {
-        if (!message) {
-          formStatus.style.display = "none";
-          formStatus.textContent = "";
-          return;
-        }
-
-        formStatus.style.display = "block";
-        formStatus.textContent = message;
       }
 
       function updatePharmacyStatusBadge() {
-        if (!pharmacyStatus) {
-          return;
-        }
-
+        const pharmacyStatus = document.getElementById("pharmacyStatus");
+        if (!pharmacyStatus) return;
         const lagosFormatter = new Intl.DateTimeFormat("en-GB", {
           timeZone: "Africa/Lagos",
           hour: "2-digit",
@@ -2586,13 +2246,16 @@
           hour12: false,
         });
         const parts = lagosFormatter.formatToParts(new Date());
-        const hour = Number(parts.find((part) => part.type === "hour")?.value || 0);
-        const minute = Number(parts.find((part) => part.type === "minute")?.value || 0);
+        const hour = Number(
+          parts.find((part) => part.type === "hour")?.value || 0,
+        );
+        const minute = Number(
+          parts.find((part) => part.type === "minute")?.value || 0,
+        );
         const minutesNow = hour * 60 + minute;
         const opensAt = 8 * 60 + 30;
         const closesAt = 21 * 60;
         const isOpen = minutesNow >= opensAt && minutesNow < closesAt;
-
         pharmacyStatus.classList.remove("open", "closed");
         pharmacyStatus.classList.add(isOpen ? "open" : "closed");
         pharmacyStatus.textContent = isOpen
@@ -2601,181 +2264,166 @@
       }
 
       function buildPrescriptionMessage() {
-        const drugName = drugNameInput.value.trim();
-        const customerMessage = customerMessageInput.value.trim();
+        const drugNameInput = document.getElementById("drugName");
+        const customerMessageInput = document.getElementById("customerMessage");
+        const drugName = drugNameInput?.value.trim() || "";
+        const customerMessage = customerMessageInput?.value.trim() || "";
         const lines = [
           `Hello ${businessName}, I want to send a prescription or medicine request.`,
         ];
-
-        if (drugName) {
-          lines.push(`Drug or request: ${drugName}`);
-        }
-
-        if (customerMessage) {
-          lines.push(`Message: ${customerMessage}`);
-        }
-
+        if (drugName) lines.push(`Drug or request: ${drugName}`);
+        if (customerMessage) lines.push(`Message: ${customerMessage}`);
         lines.push("Please review and confirm availability or next steps.");
-
         return lines.join("\n");
       }
 
       function openWhatsAppChat(message) {
-        const appUrl = `whatsapp://send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
         const webUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-        const start = Date.now();
-
-        window.location.href = appUrl;
-
-        window.setTimeout(() => {
-          if (Date.now() - start < 1600) {
-            window.location.href = webUrl;
-          }
-        }, 900);
+        window.open(webUrl, "_blank");
       }
 
       function renderProducts(list, query = "", matchedConditions = []) {
+        const productsGrid = document.getElementById("productsGrid");
+        const resultsCount = document.getElementById("resultsCount");
+        const resultsHint = document.getElementById("resultsHint");
+        const emptyState = document.getElementById("emptyState");
+        if (!productsGrid) return;
+
         productsGrid.innerHTML = list
           .map(
             (product) => `
-        <article class="product-card" data-name="${product.name.toLowerCase()}" data-tags="${product.tags.join(" ").toLowerCase()}">
-          <img src="${product.image}" alt="${product.name}">
-          <div class="product-body">
-            <div class="product-meta-row">
-              <span class="status-pill ${getStatusClass(product.stock)}">${product.stock}</span>
-              <span class="status-pill ${product.prescription ? "rx" : "otc"}">${product.prescription ? "Requires Prescription" : "Pharmacist Approved OTC"}</span>
-            </div>
-            <div class="product-summary">
-              <span class="product-category">${product.category}</span>
-              <div>
-                <h3>${product.name}</h3>
-                <p>${product.description}</p>
+          <article class="product-card">
+            <img src="${product.image}" alt="${product.name}">
+            <div class="product-body">
+              <div class="product-meta-row">
+                <span class="status-pill ${getStatusClass(product.stock)}">${product.stock}</span>
+                <span class="status-pill ${product.prescription ? "rx" : "otc"}">${product.prescription ? "Requires Prescription" : "Pharmacist Approved OTC"}</span>
+              </div>
+              <div class="product-summary">
+                <span class="product-category">${product.category || "Pharmacy"}</span>
+                <div>
+                  <h3>${product.name}</h3>
+                  <p>${product.description}</p>
+                </div>
+              </div>
+              <div class="product-advice">
+                <strong>Pharmacist advice</strong>
+                <span>${product.advice || "Contact pharmacist for more information about this medication."}</span>
+              </div>
+              <div class="product-tags">
+                ${product.tags
+                  .slice(0, 4)
+                  .map((tag) => `<span class="tag-chip">${tag}</span>`)
+                  .join("")}
+              </div>
+              <div class="product-footer">
+                <div class="product-footnote">
+                  <span>${product.stock === "Low Stock" ? "Limited stock, confirm before payment." : "Ready for availability confirmation on WhatsApp."}</span>
+                  <span>${product.prescription ? "Pharmacist review may be needed." : "Quick OTC enquiry flow."}</span>
+                </div>
+                <a class="btn btn-primary" href="${makeWhatsAppLink(product)}" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
               </div>
             </div>
-            <div class="product-advice">
-              <strong>Pharmacist advice</strong>
-              <span>${product.advice}</span>
-            </div>
-            <div class="product-tags">
-              ${product.tags.map((tag) => `<span class="tag-chip">${tag}</span>`).join("")}
-            </div>
-            <div class="product-footer">
-              <div class="product-footnote">
-                <span>${product.stock === "Low Stock" ? "Limited stock, confirm before payment." : "Ready for availability confirmation on WhatsApp."}</span>
-                <span>${product.prescription ? "Pharmacist review may be needed." : "Quick OTC enquiry flow."}</span>
-              </div>
-              <a class="btn btn-primary" href="${makeWhatsAppLink(product)}" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
-            </div>
-          </div>
-        </article>
-      `,
+          </article>
+        `,
           )
           .join("");
 
-        const hasPrescriptionResult = list.some((product) => product.prescription);
-
+        const hasPrescriptionResult = list.some(
+          (product) => product.prescription,
+        );
         if (query) {
-          resultsCount.textContent = `Found ${list.length} product${list.length === 1 ? "" : "s"} for "${query}"`;
-          resultsHint.textContent = matchedConditions.length
-            ? `Priority matches shown for ${matchedConditions.join(", ")}`
-            : "Search by medicine name, illness, or symptom";
+          if (resultsCount)
+            resultsCount.textContent = `Found ${list.length} product${list.length === 1 ? "" : "s"} for "${query}"`;
+          if (resultsHint)
+            resultsHint.textContent = matchedConditions.length
+              ? `Priority matches shown for ${matchedConditions.join(", ")}`
+              : "Search by medicine name (Lonart, Benylin) or illness";
         } else {
-          resultsCount.textContent = `Showing ${list.length} featured product${list.length === 1 ? "" : "s"}`;
-          resultsHint.textContent = `${products.length - list.length}+ more medicines appear as soon as you search`;
+          if (resultsCount)
+            resultsCount.textContent = `Showing ${list.length} featured product${list.length === 1 ? "" : "s"}`;
+          if (resultsHint)
+            resultsHint.textContent = `${products.length}+ medicines available — search by specific name like Lonart or Benylin`;
         }
-
         updateAssistPanel(query, matchedConditions, hasPrescriptionResult);
-        emptyState.style.display = list.length ? "none" : "block";
+        if (emptyState)
+          emptyState.style.display = list.length ? "none" : "block";
       }
 
       function filterProducts(query) {
         const raw = normalize(query);
-
         if (!raw) {
           renderProducts(featuredProducts);
           return;
         }
-
-        const searchTerms = expandQuery(query);
         const { matchedConditions, prioritySet } = getPriorityProducts(query);
-
         const scoredProducts = products
           .map((product) => {
             const haystack =
-              `${product.name} ${product.description} ${product.tags.join(" ")} ${product.illnesses.join(" ")} ${product.category}`.toLowerCase();
+              `${product.name} ${product.description} ${product.tags.join(" ")} ${product.illnesses?.join(" ") || ""} ${product.category || ""}`.toLowerCase();
             let score = 0;
-
-            if (product.name.toLowerCase().includes(raw)) {
-              score += 120;
-            }
-
-            if (prioritySet.has(product.name)) {
-              score += 90;
-            }
-
+            if (product.name.toLowerCase().includes(raw)) score += 120;
+            if (prioritySet.has(product.name)) score += 90;
+            const searchTerms = raw.split(/\s+/);
             searchTerms.forEach((term) => {
-              if (product.name.toLowerCase().includes(term)) {
-                score += 40;
-              }
-
-              if (product.tags.some((tag) => tag.toLowerCase().includes(term))) {
+              if (product.name.toLowerCase().includes(term)) score += 40;
+              if (product.tags.some((tag) => tag.toLowerCase().includes(term)))
                 score += 24;
-              }
-
-              if (product.illnesses.some((illness) => illness.toLowerCase().includes(term))) {
+              if (
+                product.illnesses?.some((illness) =>
+                  illness.toLowerCase().includes(term),
+                )
+              )
                 score += 24;
-              }
-
-              if (product.category.toLowerCase().includes(term)) {
-                score += 14;
-              }
-
-              if (haystack.includes(term)) {
-                score += 8;
-              }
+              if (haystack.includes(term)) score += 8;
             });
-
-            if (product.featured) {
-              score += 4;
-            }
-
-            if (product.stock === "In Stock") {
-              score += 3;
-            }
-
+            if (product.featured) score += 4;
+            if (product.stock === "In Stock") score += 3;
             return { product, score };
           })
           .filter((entry) => entry.score > 0)
           .sort((left, right) => right.score - left.score)
           .map((entry) => entry.product);
-
         renderProducts(scoredProducts, query.trim(), matchedConditions);
       }
 
-      searchInput.addEventListener("input", (event) => {
-        filterProducts(event.target.value);
-      });
-
-      if (prescriptionForm) {
-        prescriptionForm.addEventListener("submit", (event) => {
-          event.preventDefault();
-
-          const drugName = drugNameInput.value.trim();
-          const customerMessage = customerMessageInput.value.trim();
-
-          if (!drugName && !customerMessage) {
-            setFormStatus("Add a drug name or short message before continuing.");
-            return;
-          }
-
-          const message = buildPrescriptionMessage();
-          openWhatsAppChat(message);
-          setFormStatus(
-            "WhatsApp is opening directly to Kennog Pharmacy with your message ready. Add your prescription as an attachment in WhatsApp before sending.",
-          );
+      const searchInput = document.getElementById("searchInput");
+      if (searchInput) {
+        searchInput.addEventListener("input", (event) => {
+          filterProducts(event.target.value);
         });
       }
 
+      const prescriptionForm = document.getElementById("prescriptionForm");
+      if (prescriptionForm) {
+        prescriptionForm.addEventListener("submit", (event) => {
+          event.preventDefault();
+          const drugNameInput = document.getElementById("drugName");
+          const customerMessageInput =
+            document.getElementById("customerMessage");
+          const drugName = drugNameInput?.value.trim() || "";
+          const customerMessage = customerMessageInput?.value.trim() || "";
+          if (!drugName && !customerMessage) {
+            const formStatus = document.getElementById("formStatus");
+            if (formStatus) {
+              formStatus.style.display = "block";
+              formStatus.textContent =
+                "Add a drug name or short message before continuing.";
+            }
+            return;
+          }
+          const message = buildPrescriptionMessage();
+          openWhatsAppChat(message);
+          const formStatus = document.getElementById("formStatus");
+          if (formStatus) {
+            formStatus.style.display = "block";
+            formStatus.textContent =
+              "WhatsApp is opening directly to Kennog Pharmacy with your message ready. Add your prescription as an attachment in WhatsApp before sending.";
+          }
+        });
+      }
+
+      const menuToggle = document.querySelector(".menu-toggle");
       if (menuToggle) {
         menuToggle.querySelectorAll("a").forEach((link) => {
           link.addEventListener("click", () => {
